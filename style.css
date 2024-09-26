@@ -3,9 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* White as a background, inspired by the upper stripe of the Polish flag */
+    background-color: #ffffff; /* White background */
     text-align: center;
-    color: #333; /* Neutral text color */
+    color: #333;
 }
 
 /* Sticky Menu for Lessons and Test buttons */
@@ -13,14 +13,14 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: #dc143c; /* Red color inspired by the Polish flag */
+    background-color: #d32f2f; /* A softer red for the main menu */
     z-index: 1000;
     display: flex;
     justify-content: center;
     padding: 10px;
 }
 
-/* Styling for the large buttons */
+/* Large button styling */
 .large-button {
     font-size: 24px;
     padding: 20px;
@@ -28,14 +28,14 @@ body {
     width: 200px;
     cursor: pointer;
     border: 2px solid #ffffff; /* White border for contrast */
-    background-color: #dc143c; /* Red background */
+    background-color: #d32f2f; /* Softer red for the main buttons */
     color: white;
     border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 .large-button:hover {
-    background-color: #ff0000; /* Slightly brighter red on hover */
+    background-color: #c62828; /* Darker red on hover */
 }
 
 /* Disabled button styling */
@@ -62,7 +62,7 @@ table {
 
 th, td {
     padding: 10px;
-    border: 1px solid #dc143c; /* Red borders to reflect the Polish theme */
+    border: 1px solid #c62828; /* Darker red borders */
     text-align: center;
 }
 
@@ -70,7 +70,7 @@ caption h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #dc143c; /* Red caption */
+    color: #d32f2f; /* Softer red caption */
 }
 
 /* Flashcard Container */
@@ -101,7 +101,7 @@ caption h2 {
     justify-content: center;
     font-size: 18px;
     transition: transform 0.6s ease;
-    border: 2px solid #dc143c; /* Red border to reflect the Polish flag */
+    border: 2px solid #c62828; /* Darker red border */
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
@@ -115,7 +115,7 @@ caption h2 {
 
 /* Flashcard back (Pronunciation and English translation) */
 .back {
-    background-color: #dc143c; /* Red background for the back */
+    background-color: #d32f2f; /* Softer red for the back */
     color: #ffffff; /* White text on the back */
     transform: rotateY(180deg);
 }
@@ -149,7 +149,9 @@ caption h2 {
 /* Button Container for Dataset Selection in Test Mode */
 .button-container {
     display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
     justify-content: center;
+    gap: 10px; /* Spacing between buttons */
     margin: 20px 0;
 }
 
@@ -157,17 +159,17 @@ caption h2 {
     font-size: 16px;
     padding: 10px 20px;
     margin: 5px;
-    border: 2px solid #dc143c;
-    background-color: #ffffff;
-    color: #dc143c;
+    border: 2px solid #c62828; /* Darker red border */
+    background-color: #f5f5f5; /* Light gray background for contrast */
+    color: #c62828; /* Darker red text */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .button-container button:hover {
-    background-color: #dc143c;
-    color: white;
+    background-color: #c62828; /* Darker red on hover */
+    color: white; /* White text on hover */
 }
 
 button.active {

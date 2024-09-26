@@ -1,7 +1,9 @@
 let currentLanguageDataSets = [];
 
-// Function to switch between the loaded datasets
+// Function to switch between the loaded datasets and themes
 function loadLanguage(language) {
+    const body = document.body;
+
     // Get the language buttons
     const polishButton = document.querySelector(".large-button[onclick*='Polish']");
     const bengaliButton = document.querySelector(".large-button[onclick*='Bengali']");
@@ -11,10 +13,14 @@ function loadLanguage(language) {
         currentLanguageDataSets = polish_dataSets;
         polishButton.disabled = true;
         bengaliButton.disabled = false;
+        body.classList.remove('indian-theme');  // Remove Indian theme
+        body.classList.add('polish-theme');     // Add Polish theme
     } else if (language === 'Bengali') {
         currentLanguageDataSets = bengali_dataSets;
         bengaliButton.disabled = true;
         polishButton.disabled = false;
+        body.classList.remove('polish-theme');  // Remove Polish theme
+        body.classList.add('indian-theme');     // Add Indian theme
     }
 
     // Now create the buttons based on the selected language's dataset
@@ -23,29 +29,19 @@ function loadLanguage(language) {
 
 // Function to switch between Lessons and Test buttons
 function showLessons() {
-    // Get the lesson and test buttons
     const lessonButton = document.getElementById('lessonButton');
     const testButton = document.getElementById('testButton');
-
-    // Disable Lessons button and enable Test button
     lessonButton.disabled = true;
     testButton.disabled = false;
-
-    // Load lessons content
     displayLessons();  // Assuming displayLessons() function exists
 }
 
 function showTest() {
-    // Get the lesson and test buttons
     const lessonButton = document.getElementById('lessonButton');
     const testButton = document.getElementById('testButton');
-
-    // Disable Test button and enable Lessons button
     testButton.disabled = true;
     lessonButton.disabled = false;
-
-    // Create flashcards for test mode
-    createButtons(currentLanguageDataSets);  // Reuse the createButtons() function
+    createButtons(currentLanguageDataSets);
 }
 
 // Function to dynamically create buttons for each dataset in dataSets
@@ -56,17 +52,16 @@ function createButtons(dataSets) {
     // Create buttons for each dataset in dataSets
     dataSets.forEach((dataset, index) => {
         const button = document.createElement('button');
-        button.textContent = dataset.name;  // Use the dataset name as the button label
+        button.textContent = dataset.name;
         button.onclick = () => {
-            highlightButton(button); // Highlight the clicked button
-            loadFlashcards(dataset.value);  // Load the flashcards for the selected dataset
+            highlightButton(button); 
+            loadFlashcards(dataset.value); 
         };
         buttonContainer.appendChild(button);
 
-        // Automatically highlight and load the first button
         if (index === 0) {
-            highlightButton(button);  // Highlight the first button on initial load
-            loadFlashcards(dataset.value);  // Load the first dataset by default
+            highlightButton(button);  
+            loadFlashcards(dataset.value);  
         }
     });
 }

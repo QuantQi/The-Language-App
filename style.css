@@ -3,39 +3,65 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* White background */
     text-align: center;
+}
+
+/* Polish Theme */
+body.polish-theme {
+    background-color: #ffffff; /* White background */
     color: #333;
 }
 
-/* Sticky Menu for Lessons and Test buttons */
-.menu-container {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: #d32f2f; /* A softer red for the main menu */
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+.polish-theme .menu-container {
+    background-color: #d32f2f; /* Red for Polish theme */
 }
 
-/* Large button styling */
-.large-button {
-    font-size: 24px;
-    padding: 20px;
-    margin: 10px;
-    width: 200px;
-    cursor: pointer;
-    border: 2px solid #ffffff; /* White border for contrast */
+.polish-theme .large-button {
     background-color: #d32f2f; /* Softer red for the main buttons */
+    border: 2px solid #ffffff; /* White border for contrast */
     color: white;
-    border-radius: 8px;
-    transition: background-color 0.3s;
 }
 
-.large-button:hover {
+.polish-theme .large-button:hover {
     background-color: #c62828; /* Darker red on hover */
+}
+
+.polish-theme .flashcard {
+    border: 2px solid #c62828; /* Darker red border */
+}
+
+.polish-theme .back {
+    background-color: #d32f2f; /* Softer red for the back */
+    color: #ffffff; /* White text on the back */
+}
+
+/* Indian Flag Theme */
+body.indian-theme {
+    background-color: #ffffff; /* White background */
+    color: #333;
+}
+
+.indian-theme .menu-container {
+    background-color: #ff9933; /* Orange for Indian theme */
+}
+
+.indian-theme .large-button {
+    background-color: #ff9933; /* Orange for the main buttons */
+    border: 2px solid #138808; /* Green border for contrast */
+    color: white;
+}
+
+.indian-theme .large-button:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
+
+.indian-theme .flashcard {
+    border: 2px solid #138808; /* Green border for the flashcards */
+}
+
+.indian-theme .back {
+    background-color: #138808; /* Green for the back of flashcards */
+    color: #ffffff; /* White text on the back */
 }
 
 /* Disabled button styling */
@@ -45,50 +71,21 @@ body {
     cursor: not-allowed;
 }
 
-/* Content container styling */
-.content-container {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #ffffff; /* White background for content */
-}
-
-/* Table Styling for Lessons */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff; /* White background */
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #c62828; /* Darker red borders */
-    text-align: center;
-}
-
-caption h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #d32f2f; /* Softer red caption */
-}
-
-/* Flashcard Container */
+/* Flashcard Container and Styling */
 .flashcard-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin-top: 50px;
-    overflow: scroll;
 }
 
-/* Flashcard Styling */
 .flashcard {
     width: 250px;
     height: 250px;
     perspective: 1000px;
     position: relative;
+    transition: all 0.6s ease;
 }
 
 .flashcard div {
@@ -100,27 +97,17 @@ caption h2 {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    transition: transform 0.6s ease;
-    border: 2px solid #c62828; /* Darker red border */
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
 
-/* Flashcard front (Polish word) */
-.front {
+.flashcard .front {
     background-color: #ffffff; /* White front */
     color: #333; /* Neutral text color */
 }
 
-/* Flashcard back (Pronunciation and English translation) */
-.back {
-    background-color: #d32f2f; /* Softer red for the back */
-    color: #ffffff; /* White text on the back */
-    transform: rotateY(180deg);
-}
-
-.back {
+.flashcard .back {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,16 +115,15 @@ caption h2 {
     text-align: center;
 }
 
-.back strong {
+.flashcard .back strong {
     font-size: 1.2em;
 }
 
-.back em {
+.flashcard .back em {
     font-size: 1em;
     margin-top: 5px; /* Add spacing between the meaning and pronunciation */
 }
 
-/* Flashcard flip animations */
 .flashcard.flipped .front {
     transform: rotateY(180deg);
 }
@@ -149,7 +135,7 @@ caption h2 {
 /* Button Container for Dataset Selection in Test Mode */
 .button-container {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px; /* Spacing between buttons */
     margin: 20px 0;
@@ -159,17 +145,9 @@ caption h2 {
     font-size: 16px;
     padding: 10px 20px;
     margin: 5px;
-    border: 2px solid #c62828; /* Darker red border */
-    background-color: #f5f5f5; /* Light gray background for contrast */
-    color: #c62828; /* Darker red text */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.button-container button:hover {
-    background-color: #c62828; /* Darker red on hover */
-    color: white; /* White text on hover */
 }
 
 button.active {

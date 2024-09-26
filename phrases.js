@@ -331,4 +331,64 @@ const verbs = [
 
 dataSets.push({ name: 'Verbs', value: verbs });
 
+const prepositions = [
 
+    {Polish: "przyimek", Pronunciation: "pshih-yee-mek", English: "preposition"},
+    {Polish: "w", Pronunciation: "v", English: "in"},
+    {Polish: "na", Pronunciation: "nah", English: "on"},
+    {Polish: "pod", Pronunciation: "pohd", English: "under"},
+    {Polish: "nad", Pronunciation: "naht", English: "above"},
+    {Polish: "przed", Pronunciation: "pshehd", English: "before"},
+    {Polish: "po", Pronunciation: "poh", English: "after"},
+    {Polish: "obok", Pronunciation: "oh-bohk", English: "next to"},
+    {Polish: "przy", Pronunciation: "pshih", English: "by"},
+    {Polish: "między", Pronunciation: "myend-zih", English: "between"},
+    {Polish: "z", Pronunciation: "z", English: "with"}
+];
+
+dataSets.push({ name: 'Prepositions', value: prepositions });
+
+const conjunctions = [
+
+    {Polish: "spójnik", Pronunciation: "spoy-neek", English: "conjunction"},
+    {Polish: "i", Pronunciation: "ee", English: "and"},
+    {Polish: "albo", Pronunciation: "ahl-boh", English: "or"},
+    {Polish: "ale", Pronunciation: "ah-leh", English: "but"},
+    {Polish: "gdy", Pronunciation: "gdih", English: "when"},
+    {Polish: "jeśli", Pronunciation: "yeh-swee", English: "if"},
+    {Polish: "ponieważ", Pronunciation: "poh-nyeh-vahzh", English: "because"},
+    {Polish: "aby", Pronunciation: "ah-bih", English: "in order to"},
+    {Polish: "lub", Pronunciation: "loob", English: "or"},
+    {Polish: "więc", Pronunciation: "vyents", English: "so"},
+    {Polish: "mimo że", Pronunciation: "mee-moh zheh", English: "although"}
+];
+
+dataSets.push({ name: 'Conjunctions', value: conjunctions });
+
+const questionWords = [
+
+    {Polish: "zaimek pytający", Pronunciation: "zah-ee-mek pitah-yon-tsih", English: "question word"},
+    {Polish: "co", Pronunciation: "tso", English: "what"},
+    {Polish: "kto", Pronunciation: "ktoh", English: "who"},
+    {Polish: "gdzie", Pronunciation: "gdyeh", English: "where"},
+    {Polish: "kiedy", Pronunciation: "kyeh-dih", English: "when"},
+    {Polish: "dlaczego", Pronunciation: "dlah-cheh-goh", English: "why"},
+    {Polish: "ile", Pronunciation: "ee-leh", English: "how much"},
+    {Polish: "jak", Pronunciation: "yahk", English: "how"},
+    {Polish: "czy", Pronunciation: "chi", English: "whether"},
+    {Polish: "który", Pronunciation: "ktoh-rih", English: "which"},
+    {Polish: "czyj", Pronunciation: "chiy", English: "whose"}
+];
+
+dataSets.push({ name: 'Question Words', value: questionWords });
+
+const time = [
+    
+        {Polish: "czas", Pronunciation: "chahs", English: "time"},
+        {Polish: "godzina", Pronunciation: "goh-dzee-nah", English: "hour"},
+        {Polish: "minuta", Pronunciation: "mee-noo-tah", English: "minute"},
+        {Polish: "sekunda", Pronunciation: " seh -koon-dah", English: "second"},
+        {Polish: "dzień", Pronunciation: "dzyen", English: "day"}
+];
+
+dataSets.push({ name: 'Time', value: time });

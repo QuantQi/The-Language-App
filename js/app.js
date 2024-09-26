@@ -20,12 +20,12 @@ function loadLanguage(language) {
         polishButton.disabled = false;
     }
 
-    // Enable the Lessons and Test buttons after a language is selected
-    document.getElementById('lessonButton').disabled = false;
-    document.getElementById('testButton').disabled = false;
+    // Automatically load the test once the language is selected
+    loadTest();
 
-    // Now create the buttons based on the selected language's dataset
-    createButtons(currentLanguageDataSets);
+    // Enable the Lessons button but keep Test disabled
+    document.getElementById('lessonButton').disabled = false;
+    document.getElementById('testButton').disabled = true;
 }
 
 // Function to reset the entire app state
@@ -49,6 +49,11 @@ function resetApp() {
     allButtons.forEach(btn => btn.classList.remove('active'));
 }
 
+// Function to load the test directly after language selection
+function loadTest() {
+    createButtons(currentLanguageDataSets);  // Create the test buttons automatically
+}
+
 // Function to switch between Lessons and Test buttons
 function showLessons() {
     const lessonButton = document.getElementById('lessonButton');
@@ -56,14 +61,6 @@ function showLessons() {
     lessonButton.disabled = true;
     testButton.disabled = false;
     displayLessons();  // Assuming displayLessons() function exists
-}
-
-function showTest() {
-    const lessonButton = document.getElementById('lessonButton');
-    const testButton = document.getElementById('testButton');
-    testButton.disabled = true;
-    lessonButton.disabled = false;
-    createButtons(currentLanguageDataSets);
 }
 
 // Function to dynamically create buttons for each dataset in dataSets

@@ -20,6 +20,10 @@ function loadLanguage(language) {
         polishButton.disabled = false;
     }
 
+    // Enable the Lessons and Test buttons after a language is selected
+    document.getElementById('lessonButton').disabled = false;
+    document.getElementById('testButton').disabled = false;
+
     // Now create the buttons based on the selected language's dataset
     createButtons(currentLanguageDataSets);
 }
@@ -30,11 +34,11 @@ function resetApp() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = '';
 
-    // Re-enable both Lessons and Test buttons
+    // Disable both Lessons and Test buttons initially
     const lessonButton = document.getElementById('lessonButton');
     const testButton = document.getElementById('testButton');
-    lessonButton.disabled = false;
-    testButton.disabled = false;
+    lessonButton.disabled = true;
+    testButton.disabled = true;
 
     // Clear any dynamically created buttons in the button container
     const buttonContainer = document.querySelector('.button-container');

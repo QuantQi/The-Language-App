@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/flashcards.css">
 </head>
 <body>
-    <!-- Your HTML content goes here -->
+    <!-- Language selection buttons -->
     <div class="menu-container" id="languageMenuContainer">
         <button class="large-button" onclick="loadLanguage('Polish')">
             <span class="material-icons">flag</span> Polish
@@ -24,12 +24,12 @@
         </button>
     </div>
 
-    <!-- Lessons and Test Buttons -->
+    <!-- Lessons and Test Buttons (disabled by default) -->
     <div class="menu-container" id="lessonsTestContainer">
-        <button class="large-button" id="lessonButton" onclick="showLessons()">
+        <button class="large-button" id="lessonButton" onclick="showLessons()" disabled>
             <span class="material-icons">menu_book</span> Lessons
         </button>
-        <button class="large-button" id="testButton" onclick="showTest()">
+        <button class="large-button" id="testButton" onclick="showTest()" disabled>
             <span class="material-icons">quiz</span> Test
         </button>
     </div>

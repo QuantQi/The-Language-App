@@ -6,30 +6,33 @@
     <title>Language Flashcards</title>
     <!-- Link to Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- Link to CSS files -->
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="css/flashcards.css">
 </head>
-<body>
+<body class="polish-theme"> <!-- Polish theme applied by default -->
+
     <!-- Language selection buttons -->
     <div class="menu-container" id="languageMenuContainer">
-        <button class="large-button" onclick="loadLanguage('Polish')">
+        <!-- Switch to Polish Theme -->
+        <button class="large-button" onclick="document.body.className='polish-theme'">
             <span class="material-icons">flag</span> Polish
         </button>
-        <button class="large-button" onclick="loadLanguage('Bengali')">
+        <!-- Switch to Bengali Theme -->
+        <button class="large-button" onclick="document.body.className='bengali-theme'">
             <span class="material-icons">flag</span> Bengali
         </button>
     </div>
 
-    <!-- Lessons and Test Buttons (disabled by default) -->
+    <!-- Lessons and Test Buttons -->
     <div class="menu-container" id="lessonsTestContainer">
-        <button class="large-button" id="lessonButton" onclick="showLessons()" disabled>
+        <button class="large-button" id="lessonButton" onclick="showLessons()">
             <span class="material-icons">menu_book</span> Lessons
         </button>
-        <button class="large-button" id="testButton" onclick="showTest()" disabled>
+        <button class="large-button" id="testButton" onclick="showTest()">
             <span class="material-icons">quiz</span> Test
         </button>
     </div>

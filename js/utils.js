@@ -1,13 +1,6 @@
-// utils.js
-
-// Global variable to track the active button
-let activeButton = null;
-
-// Function to highlight the clicked button and remove highlight from the previous one
+// Function to highlight the active button
 function highlightButton(button) {
-    if (activeButton) {
-        activeButton.classList.remove('active');  // Remove the highlight from the previous button
-    }
-    button.classList.add('active');  // Highlight the clicked button
-    activeButton = button;  // Set the current button as active
+    const allButtons = document.querySelectorAll('.button-container button');
+    allButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
 }

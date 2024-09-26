@@ -27,7 +27,7 @@ function showLessons() {
     const testButton = document.getElementById('testButton');
     lessonButton.disabled = true;
     testButton.disabled = false;
-    displayLessons();
+    displayLessons();  // Assuming displayLessons() function exists
 }
 
 function showTest() {
@@ -48,5 +48,14 @@ function createButtons(dataSets) {
         const button = document.createElement('button');
         button.textContent = dataset.name;
         button.onclick = () => {
-            highlightButton(button);
-            loadFlashcards
+            highlightButton(button); 
+            loadFlashcards(dataset.value); 
+        };
+        buttonContainer.appendChild(button);
+
+        if (index === 0) {
+            highlightButton(button);  
+            loadFlashcards(dataset.value);  
+        }
+    });
+}

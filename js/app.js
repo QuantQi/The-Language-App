@@ -1,7 +1,10 @@
 let currentLanguageDataSets = [];
 
-// Function to switch between the loaded datasets
+// Function to switch between the loaded datasets and reset the app
 function loadLanguage(language) {
+    // Reset the content container, button states, and dataset buttons
+    resetApp();
+
     // Get the language buttons
     const polishButton = document.querySelector(".large-button[onclick*='Polish']");
     const bengaliButton = document.querySelector(".large-button[onclick*='Bengali']");
@@ -19,6 +22,27 @@ function loadLanguage(language) {
 
     // Now create the buttons based on the selected language's dataset
     createButtons(currentLanguageDataSets);
+}
+
+// Function to reset the entire app state
+function resetApp() {
+    // Clear the content container
+    const contentContainer = document.getElementById('contentContainer');
+    contentContainer.innerHTML = '';
+
+    // Re-enable both Lessons and Test buttons
+    const lessonButton = document.getElementById('lessonButton');
+    const testButton = document.getElementById('testButton');
+    lessonButton.disabled = false;
+    testButton.disabled = false;
+
+    // Clear any dynamically created buttons in the button container
+    const buttonContainer = document.querySelector('.button-container');
+    buttonContainer.innerHTML = '';
+
+    // Remove any active class from dataset buttons (if any)
+    const allButtons = document.querySelectorAll('.button-container button');
+    allButtons.forEach(btn => btn.classList.remove('active'));
 }
 
 // Function to switch between Lessons and Test buttons

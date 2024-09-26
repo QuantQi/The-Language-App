@@ -11,19 +11,16 @@ function loadLanguage(language) {
         currentLanguageDataSets = polish_dataSets;
         polishButton.disabled = true;
         bengaliButton.disabled = false;
-
-        // Enable the Lessons button, but keep Test disabled
-        document.getElementById('lessonButton').disabled = false;
-        document.getElementById('testButton').disabled = true;
     } else if (language === 'Bengali') {
         currentLanguageDataSets = bengali_dataSets;
         bengaliButton.disabled = true;
         polishButton.disabled = false;
-
-        // Enable the Test button, but keep Lessons disabled
-        document.getElementById('testButton').disabled = false;
-        document.getElementById('lessonButton').disabled = true;
     }
+
+    // Automatically load the lessons after a language is selected
+    document.getElementById('lessonButton').disabled = false;
+    document.getElementById('testButton').disabled = true;
+    showLessons();
 }
 
 // Function to reset the entire app state

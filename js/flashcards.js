@@ -1,15 +1,8 @@
 // flashcards.js
 
 // Function to dynamically create buttons for each dataset in dataSets
-function createButtons() {
+function createButtons(dataSets) {
     const buttonContainer = document.querySelector('.button-container');
-    
-    // Check if the buttonContainer exists in the DOM
-    if (!buttonContainer) {
-        console.error('buttonContainer element is not found in the DOM');
-        return;
-    }
-
     buttonContainer.innerHTML = '';  // Clear the button container
 
     // Dynamically create buttons for each data set in dataSets
@@ -53,11 +46,11 @@ function createFlashcard(phrase, pronunciation, english) {
 
     const front = document.createElement('div');
     front.classList.add('front');
-    front.innerHTML = `<strong>${phrase}</strong><br><em>${pronunciation}</em>`;
+    front.innerHTML = `<strong>${phrase}</strong>`;
 
     const back = document.createElement('div');
     back.classList.add('back');
-    back.innerHTML = `<strong>${english}</strong>`;
+    back.innerHTML = `<strong>${english}</strong><br><em>${pronunciation}</em>`;  // Add line breaks between meaning and pronunciation
 
     flashcard.appendChild(front);
     flashcard.appendChild(back);

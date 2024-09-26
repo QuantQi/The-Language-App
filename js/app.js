@@ -2,14 +2,50 @@ let currentLanguageDataSets = [];
 
 // Function to switch between the loaded datasets
 function loadLanguage(language) {
+    // Get the language buttons
+    const polishButton = document.querySelector(".large-button[onclick*='Polish']");
+    const bengaliButton = document.querySelector(".large-button[onclick*='Bengali']");
+
+    // Disable the selected language button and enable the other
     if (language === 'Polish') {
-        currentLanguageDataSets = polish_dataSets;  // Use Polish dataset
+        currentLanguageDataSets = polish_dataSets;
+        polishButton.disabled = true;
+        bengaliButton.disabled = false;
     } else if (language === 'Bengali') {
-        currentLanguageDataSets = bengali_dataSets;  // Use Bengali dataset
+        currentLanguageDataSets = bengali_dataSets;
+        bengaliButton.disabled = true;
+        polishButton.disabled = false;
     }
 
     // Now create the buttons based on the selected language's dataset
     createButtons(currentLanguageDataSets);
+}
+
+// Function to switch between Lessons and Test buttons
+function showLessons() {
+    // Get the lesson and test buttons
+    const lessonButton = document.getElementById('lessonButton');
+    const testButton = document.getElementById('testButton');
+
+    // Disable Lessons button and enable Test button
+    lessonButton.disabled = true;
+    testButton.disabled = false;
+
+    // Load lessons content
+    displayLessons();  // Assuming displayLessons() function exists
+}
+
+function showTest() {
+    // Get the lesson and test buttons
+    const lessonButton = document.getElementById('lessonButton');
+    const testButton = document.getElementById('testButton');
+
+    // Disable Test button and enable Lessons button
+    testButton.disabled = true;
+    lessonButton.disabled = false;
+
+    // Create flashcards for test mode
+    createButtons(currentLanguageDataSets);  // Reuse the createButtons() function
 }
 
 // Function to dynamically create buttons for each dataset in dataSets

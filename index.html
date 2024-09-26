@@ -13,6 +13,12 @@
         <button class="large-button" onclick="loadLanguage('Bengali')">Bengali</button>
     </div>
 
+    <!-- Lessons and Test Buttons -->
+    <div class="menu-container" id="lessonsTestContainer">
+        <button class="large-button" id="lessonButton" onclick="showLessons()">Lessons</button>
+        <button class="large-button" id="testButton" onclick="showTest()">Test</button>
+    </div>
+
     <!-- Buttons for datasets (will be generated dynamically) -->
     <div class="button-container"></div>
 
@@ -21,7 +27,6 @@
     </div>
 
     <!-- Scripts -->
-    <!-- Load both language phrase files -->
     <script src="Polish/phrases.js"></script>  <!-- Load Polish dataset -->
     <script src="Bengali/phrases.js"></script> <!-- Load Bengali dataset -->
     <script src="js/utils.js"></script>

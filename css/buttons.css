@@ -42,7 +42,7 @@
     cursor: not-allowed;
 }
 
-/* Button Container for Dataset Selection */
+/* Button Container for Dataset Selection (Test mode) */
 .button-container {
     display: flex;
     flex-wrap: wrap;

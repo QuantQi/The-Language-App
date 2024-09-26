@@ -1,38 +1,33 @@
-// lessons.js
-
-// Function to display lessons in table format
+// Function to display lessons from the current language dataset
 function displayLessons() {
     const contentContainer = document.getElementById('contentContainer');
+    contentContainer.innerHTML = '';  // Clear previous content
 
-    // Loop through each dataset in dataSets and create tables
-    dataSets.forEach(dataset => {
-        const table = document.createElement('table');
-        const caption = document.createElement('caption');
-        caption.innerHTML = `<h2>${dataset.name.toUpperCase()}</h2>`;  // Use <h2> in caption
-        table.appendChild(caption);
+    // Check if a dataset is loaded
+    if (!currentLanguageDataSets || currentLanguageDataSets.length === 0) {
+        contentContainer.innerHTML = '<p>Please select a language first.</p>';
+        return;
+    }
 
-        const headerRow = document.createElement('tr');
-        headerRow.innerHTML = `
-            <th>Phrase</th>
-            <th>Pronunciation</th>
-            <th>English</th>
-        `;
-        table.appendChild(headerRow);
+    // Create a table to display the dataset as a lesson
+    const table = document.createElement('table');
+    const caption = document.createElement('caption');
+    caption.innerHTML = '<h2>Lesson</h2>';
+    table.appendChild(caption);
 
-        dataset.value.forEach((item, index) => {
+    // Add table header
+    const headerRow = document.createElement('tr');
+    headerRow.innerHTML = '<th>Phrase</th><th>Pronunciation</th><th>English</th>';
+    table.appendChild(headerRow);
+
+    // Loop through the dataset and add rows
+    currentLanguageDataSets.forEach(dataset => {
+        dataset.value.forEach(item => {
             const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${item.Phrase}</td>
-                <td>${item.Pronunciation}</td>
-                <td>${item.English}</td>
-            `;
-
-            // Apply alternating row background color
-            row.style.backgroundColor = index % 2 === 0 ? '#f4f4f4' : '#fff';
-
+            row.innerHTML = `<td>${item.Phrase}</td><td>${item.Pronunciation}</td><td>${item.English}</td>`;
             table.appendChild(row);
         });
-
-        contentContainer.appendChild(table);
     });
+
+    contentContainer.appendChild(table);
 }

@@ -91,3 +91,20 @@
     background-color: #1976D2; /* Darker blue on hover */
 }
 
+/* "Go to top" link styling */
+.go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.go-to-top:hover {
+    background-color: #1976D2;
+}

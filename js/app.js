@@ -56,6 +56,7 @@ function showLessons() {
 }
 
 // Function to dynamically generate buttons for table navigation and display multiple tables for lessons
+// Function to dynamically generate buttons for table navigation and display multiple tables for lessons
 function displayLessons() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = '';  // Clear previous content
@@ -106,6 +107,17 @@ function displayLessons() {
 
     // Prepend the navigation buttons container to the content container
     contentContainer.prepend(navButtonsContainer);
+
+    // Add the "Go to top" link at the bottom-right corner
+    const goToTopLink = document.createElement('a');
+    goToTopLink.textContent = 'Go to top';
+    goToTopLink.href = '#';
+    goToTopLink.classList.add('go-to-top');
+    goToTopLink.onclick = (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    contentContainer.appendChild(goToTopLink);
 }
 
 // Function to show test mode and hide lessons

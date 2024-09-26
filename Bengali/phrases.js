@@ -1,5 +1,5 @@
 // Initialize the array with the existing constants
-//const dataSets = [];
+const polish_dataSets = [];
 
 const greetings = [
     {Phrase: "Nomoshkar", Pronunciation: "no-mosh-kar", English: "Hello"},
@@ -14,7 +14,7 @@ const greetings = [
     {Phrase: "Na", Pronunciation: "na", English: "No"}
 ];
 
-dataSets.push({ name: 'Greetings', value: greetings });
+polish_dataSets.push({ name: 'Greetings', value: greetings });
 
 const cardinalNumbers = [
     {Phrase: "Ek", Pronunciation: "ek", English: "one"},
@@ -29,7 +29,7 @@ const cardinalNumbers = [
     {Phrase: "Dosh", Pronunciation: "dosh", English: "ten"}
 ];
 
-dataSets.push({ name: 'Cardinal Numbers', value: cardinalNumbers });
+polish_dataSets.push({ name: 'Cardinal Numbers', value: cardinalNumbers });
 
 const ordinalNumbers = [
     {Phrase: "Prothom", Pronunciation: "pro-thom", English: "first"},
@@ -44,7 +44,7 @@ const ordinalNumbers = [
     {Phrase: "Doshom", Pronunciation: "do-shom", English: "tenth"}
 ];
 
-dataSets.push({ name: 'Ordinal Numbers', value: ordinalNumbers });
+polish_dataSets.push({ name: 'Ordinal Numbers', value: ordinalNumbers });
 const colors = [
     {Phrase: "kalo", Pronunciation: "kah-lo", English: "black"},
     {Phrase: "shada", Pronunciation: "sha-da", English: "white"},
@@ -58,7 +58,7 @@ const colors = [
     {Phrase: "badami", Pronunciation: "ba-da-mi", English: "brown"}
 ];
 
-dataSets.push({ name: 'Colors', value: colors });
+polish_dataSets.push({ name: 'Colors', value: colors });
 
 const family = [
     {Phrase: "poribar", Pronunciation: "po-ri-bar", English: "family"},
@@ -73,7 +73,7 @@ const family = [
     {Phrase: "dadu", Pronunciation: "da-du", English: "grandfather"}
 ];
 
-dataSets.push({ name: 'Family', value: family });
+polish_dataSets.push({ name: 'Family', value: family });
 
 const bodyParts = [
     {Phrase: "shorir", Pronunciation: "sho-rir", English: "body"},
@@ -88,7 +88,7 @@ const bodyParts = [
     {Phrase: "hat", Pronunciation: "hat", English: "hand"}
 ];
 
-dataSets.push({ name: 'Body Parts', value: bodyParts });
+polish_dataSets.push({ name: 'Body Parts', value: bodyParts });
 
 const animals = [
     {Phrase: "prani", Pronunciation: "pra-ni", English: "animal"},
@@ -103,7 +103,7 @@ const animals = [
     {Phrase: "murgi", Pronunciation: "mur-gi", English: "chicken"}
 ];
 
-dataSets.push({ name: 'Animals', value: animals });
+polish_dataSets.push({ name: 'Animals', value: animals });
 
 const food = [
     {Phrase: "khaddo", Pronunciation: "khad-do", English: "food"},
@@ -118,7 +118,7 @@ const food = [
     {Phrase: "chal", Pronunciation: "chal", English: "rice"}
 ];
 
-dataSets.push({ name: 'Food', value: food });
+polish_dataSets.push({ name: 'Food', value: food });
 
 const drinks = [
     {Phrase: "panio", Pronunciation: "pa-ni-o", English: "drink"},
@@ -133,7 +133,7 @@ const drinks = [
     {Phrase: "whisky", Pronunciation: "whis-ki", English: "whisky"}
 ];
 
-dataSets.push({ name: 'Drinks', value: drinks });
+polish_dataSets.push({ name: 'Drinks', value: drinks });
 
 const fruits = [
     {Phrase: "fol", Pronunciation: "fol", English: "fruit"},
@@ -148,7 +148,7 @@ const fruits = [
     {Phrase: "anaros", Pronunciation: "a-na-ros", English: "pineapple"}
 ];
 
-dataSets.push({ name: 'Fruits', value: fruits });
+polish_dataSets.push({ name: 'Fruits', value: fruits });
 
 const vegetables = [
     {Phrase: "sobji", Pronunciation: "sob-ji", English: "vegetable"},
@@ -163,7 +163,7 @@ const vegetables = [
     {Phrase: "celery", Pronunciation: "ce-le-ry", English: "celery"}
 ];
 
-dataSets.push({ name: 'Vegetables', value: vegetables });
+polish_dataSets.push({ name: 'Vegetables', value: vegetables });
 
 const countries = [
     {Phrase: "desh", Pronunciation: "desh", English: "country"},
@@ -178,7 +178,7 @@ const countries = [
     {Phrase: "Japan", Pronunciation: "Ja-pan", English: "Japan"}
 ];
 
-dataSets.push({ name: 'Countries', value: countries });
+polish_dataSets.push({ name: 'Countries', value: countries });
 const cities = [
     {Phrase: "shohor", Pronunciation: "sho-hor", English: "city"},
     {Phrase: "Dhaka", Pronunciation: "Dha-ka", English: "Dhaka"},
@@ -192,7 +192,7 @@ const cities = [
     {Phrase: "Narayanganj", Pronunciation: "Na-ra-yan-ganj", English: "Narayanganj"}
 ];
 
-dataSets.push({ name: 'Cities', value: cities });
+polish_dataSets.push({ name: 'Cities', value: cities });
 
 const transport = [
     {Phrase: "poribohon", Pronunciation: "po-ri-bo-hon", English: "transport"},
@@ -207,7 +207,7 @@ const transport = [
     {Phrase: "jahaj", Pronunciation: "ja-haj", English: "ship"}
 ];
 
-dataSets.push({ name: 'Transport', value: transport });
+polish_dataSets.push({ name: 'Transport', value: transport });
 
 const professions = [
     {Phrase: "peshabisheshoggo", Pronunciation: "pe-sha-bi-she-shog-go", English: "profession"},
@@ -222,7 +222,7 @@ const professions = [
     {Phrase: "khelowar", Pronunciation: "khe-lo-war", English: "athlete"}
 ];
 
-dataSets.push({ name: 'Professions', value: professions });
+polish_dataSets.push({ name: 'Professions', value: professions });
 
 const weather = [
     {Phrase: "abohawa", Pronunciation: "a-bo-ha-wa", English: "weather"},
@@ -237,7 +237,7 @@ const weather = [
     {Phrase: "shila", Pronunciation: "shi-la", English: "hail"}
 ];
 
-dataSets.push({ name: 'Weather', value: weather });
+polish_dataSets.push({ name: 'Weather', value: weather });
 
 const seasons = [
     {Phrase: "ritu", Pronunciation: "ri-tu", English: "season"},
@@ -247,7 +247,7 @@ const seasons = [
     {Phrase: "shit", Pronunciation: "shit", English: "winter"}
 ];
 
-dataSets.push({ name: 'Seasons', value: seasons });
+polish_dataSets.push({ name: 'Seasons', value: seasons });
 
 const months = [
     {Phrase: "mash", Pronunciation: "mash", English: "month"},
@@ -265,7 +265,7 @@ const months = [
     {Phrase: "December", Pronunciation: "De-cem-ber", English: "December"}
 ];
 
-dataSets.push({ name: 'Months', value: months });
+polish_dataSets.push({ name: 'Months', value: months });
 
 const daysOfWeek = [
     {Phrase: "shoptaher din", Pronunciation: "shop-ta-her din", English: "day of the week"},
@@ -278,7 +278,7 @@ const daysOfWeek = [
     {Phrase: "Robibar", Pronunciation: "Ro-bi-bar", English: "Sunday"}
 ];
 
-dataSets.push({ name: 'Days of the Week', value: daysOfWeek });
+polish_dataSets.push({ name: 'Days of the Week', value: daysOfWeek });
 
 const phrases = [
     {Phrase: "tumi kemon acho?", Pronunciation: "tu-mi ke-mon a-cho", English: "how are you?"},
@@ -293,7 +293,7 @@ const phrases = [
     {Phrase: "tomar shathe dekha hoye bhalo laglo", Pronunciation: "to-mar sha-the de-kha ho-ye bha-lo lag-lo", English: "nice to meet you"}
 ];
 
-dataSets.push({ name: 'Phrases', value: phrases });
+polish_dataSets.push({ name: 'Phrases', value: phrases });
 
 const adjectives = [
     {Phrase: "bisheshon", Pronunciation: "bi-she-shon", English: "adjective"},
@@ -309,7 +309,7 @@ const adjectives = [
     {Phrase: "briddho", Pronunciation: "brid-dho", English: "old"}
 ];
 
-dataSets.push({ name: 'Adjectives', value: adjectives });
+polish_dataSets.push({ name: 'Adjectives', value: adjectives });
 
 const verbs = [
     {Phrase: "kriya", Pronunciation: "kri-ya", English: "verb"},
@@ -325,7 +325,7 @@ const verbs = [
     {Phrase: "dekhte", Pronunciation: "dekh-te", English: "to look"}
 ];
 
-dataSets.push({ name: 'Verbs', value: verbs });
+polish_dataSets.push({ name: 'Verbs', value: verbs });
 
 const prepositions = [
     {Phrase: "protipadok", Pronunciation: "pro-ti-pa-dok", English: "preposition"},
@@ -341,7 +341,7 @@ const prepositions = [
     {Phrase: "shathe", Pronunciation: "sha-the", English: "with"}
 ];
 
-dataSets.push({ name: 'Prepositions', value: prepositions });
+polish_dataSets.push({ name: 'Prepositions', value: prepositions });
 
 const conjunctions = [
     {Phrase: "juktibodhak", Pronunciation: "juk-ti-bo-dhak", English: "conjunction"},
@@ -357,7 +357,7 @@ const conjunctions = [
     {Phrase: "jodio", Pronunciation: "jo-di-o", English: "although"}
 ];
 
-dataSets.push({ name: 'Conjunctions', value: conjunctions });
+polish_dataSets.push({ name: 'Conjunctions', value: conjunctions });
 
 const questionWords = [
     {Phrase: "proshno shobdo", Pronunciation: "pro-shno shob-do", English: "question word"},
@@ -373,7 +373,7 @@ const questionWords = [
     {Phrase: "kar", Pronunciation: "kar", English: "whose"}
 ];
 
-dataSets.push({ name: 'Question Words', value: questionWords });
+polish_dataSets.push({ name: 'Question Words', value: questionWords });
 
 const time = [
     {Phrase: "shomoy", Pronunciation: "sho-moy", English: "time"},
@@ -383,4 +383,4 @@ const time = [
     {Phrase: "din", Pronunciation: "din", English: "day"}
 ];
 
-dataSets.push({ name: 'Time', value: time });
+polish_dataSets.push({ name: 'Time', value: time });

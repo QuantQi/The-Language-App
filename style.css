@@ -6,8 +6,31 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
+.large-button {
+    font-size: 24px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    cursor: pointer;
+    border: none;
+    background-color: #ffcc00;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.large-button:hover {
+    background-color: #ff9900;
+}
+
+.content-container {
+    margin-top: 30px;
+}
 
 .button-container {
     top: 0;  /* Stick the button container to the top */

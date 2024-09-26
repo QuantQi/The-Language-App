@@ -1,11 +1,54 @@
-let activeButton = null; // Track the currently active (highlighted) button
+let activeButton = null;
 
-// Dynamically create buttons for each dataset in dataSets array
+// Function to handle showing lessons in table format
+function showLessons() {
+    const contentContainer = document.getElementById('contentContainer');
+    contentContainer.innerHTML = ''; // Clear previous content
+
+    // Loop through each dataset in dataSets
+    dataSets.forEach(dataset => {
+        const table = document.createElement('table');
+        const caption = document.createElement('caption');
+        caption.textContent = dataset.name.toUpperCase();
+        table.appendChild(caption);
+
+        const headerRow = document.createElement('tr');
+        headerRow.innerHTML = `
+            <th>Polish</th>
+            <th>Pronunciation</th>
+            <th>English</th>
+        `;
+        table.appendChild(headerRow);
+
+        dataset.value.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.Polish}</td>
+                <td>${item.Pronunciation}</td>
+                <td>${item.English}</td>
+            `;
+            table.appendChild(row);
+        });
+
+        contentContainer.appendChild(table);
+    });
+}
+
+// Function to handle showing flashcards for the test
+function showTest() {
+    const contentContainer = document.getElementById('contentContainer');
+    contentContainer.innerHTML = ''; // Clear previous content
+
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-container');
+    contentContainer.appendChild(buttonContainer);
+
+    createButtons(); // Dynamically create buttons and load flashcards
+}
+
+// Dynamically create buttons for each dataset in dataSets array (as in previous script)
 function createButtons() {
-    const flashcardContainer = document.getElementById('flashcardContainer');
-    flashcardContainer.innerHTML = ''; // Clear previous flashcards
-
-    const buttonContainer = document.getElementById('buttonContainer');
+    const buttonContainer = document.querySelector('.button-container');
     buttonContainer.innerHTML = '';  // Clear the button container
 
     // Dynamically create buttons for each data set in dataSets
@@ -37,7 +80,11 @@ function highlightButton(button) {
 
 // Function to load the flashcards based on the selected dataset
 function loadFlashcards(data) {
-    const flashcardContainer = document.getElementById('flashcardContainer');
+    const contentContainer = document.getElementById('contentContainer');
+    const flashcardContainer = document.createElement('div');
+    flashcardContainer.classList.add('flashcard-container');
+    contentContainer.appendChild(flashcardContainer);
+
     flashcardContainer.innerHTML = ''; // Clear previous flashcards
 
     data.forEach(item => {
@@ -57,23 +104,17 @@ function createFlashcard(polish, pronunciation, english) {
 
     const back = document.createElement('div');
     back.classList.add('back');
-    // Separate the meaning and pronunciation into different lines
     back.innerHTML = `<strong>${english}</strong><br><em>${pronunciation}</em>`;
 
     flashcard.appendChild(front);
     flashcard.appendChild(back);
-    document.getElementById('flashcardContainer').appendChild(flashcard);
+    document.querySelector('.flashcard-container').appendChild(flashcard);
 }
 
 // Function to flip a flashcard and flip it back after 3 seconds
 function flipCard(card) {
     card.classList.add('flipped');
-    
-    // Automatically flip the card back after 3 seconds (3000 ms)
     setTimeout(() => {
         card.classList.remove('flipped');
     }, 3000);
 }
-
-// Run the createButtons function when the page loads to dynamically create buttons
-window.onload = createButtons;

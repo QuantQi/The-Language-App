@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="button-container" id="buttonContainer">
-        <!-- Buttons will be dynamically generated here -->
+    <h1>Polish Flashcards</h1>
+
+    <div class="menu-container" id="menuContainer">
+        <button class="large-button" onclick="showLessons()">Lessons</button>
+        <button class="large-button" onclick="showTest()">Test</button>
     </div>
 
-    <div class="flashcard-container" id="flashcardContainer">
-        <!-- Flashcards will be loaded here -->
+    <div class="content-container" id="contentContainer">
+        <!-- Either lessons or test will be displayed here -->
     </div>
 
     <!-- Include the merged phrases.js file -->
     <script src="phrases.js"></script>
     <script src="script.js"></script>
-
-
 </body>
 </html>

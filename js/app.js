@@ -1,9 +1,7 @@
 let currentLanguageDataSets = [];
 
-// Function to switch between the loaded datasets and themes
+// Function to switch between the loaded datasets
 function loadLanguage(language) {
-    const body = document.body;
-
     // Get the language buttons
     const polishButton = document.querySelector(".large-button[onclick*='Polish']");
     const bengaliButton = document.querySelector(".large-button[onclick*='Bengali']");
@@ -13,14 +11,10 @@ function loadLanguage(language) {
         currentLanguageDataSets = polish_dataSets;
         polishButton.disabled = true;
         bengaliButton.disabled = false;
-        body.classList.remove('indian-theme');  // Remove Indian theme
-        body.classList.add('polish-theme');     // Add Polish theme
     } else if (language === 'Bengali') {
         currentLanguageDataSets = bengali_dataSets;
         bengaliButton.disabled = true;
         polishButton.disabled = false;
-        body.classList.remove('polish-theme');  // Remove Polish theme
-        body.classList.add('indian-theme');     // Add Indian theme
     }
 
     // Now create the buttons based on the selected language's dataset
@@ -33,7 +27,7 @@ function showLessons() {
     const testButton = document.getElementById('testButton');
     lessonButton.disabled = true;
     testButton.disabled = false;
-    displayLessons();  // Assuming displayLessons() function exists
+    displayLessons();
 }
 
 function showTest() {
@@ -54,14 +48,5 @@ function createButtons(dataSets) {
         const button = document.createElement('button');
         button.textContent = dataset.name;
         button.onclick = () => {
-            highlightButton(button); 
-            loadFlashcards(dataset.value); 
-        };
-        buttonContainer.appendChild(button);
-
-        if (index === 0) {
-            highlightButton(button);  
-            loadFlashcards(dataset.value);  
-        }
-    });
-}
+            highlightButton(button);
+            loadFlashcards

@@ -2,10 +2,15 @@
 
 // Function to dynamically create buttons for each dataset in dataSets
 function createButtons() {
-    const contentContainer = document.getElementById('contentContainer'); // Get the content container
-    const buttonContainer = document.createElement('div');
-    buttonContainer.classList.add('button-container');
-    contentContainer.appendChild(buttonContainer);  // Append the button container to content container
+    const contentContainer = document.getElementById('contentContainer');
+    
+    // Create a button container if it doesn't exist
+    let buttonContainer = document.querySelector('.button-container');
+    if (!buttonContainer) {
+        buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-container');
+        contentContainer.appendChild(buttonContainer);  // Append button container to content container
+    }
 
     // Clear the button container before adding buttons
     buttonContainer.innerHTML = '';  
@@ -30,16 +35,18 @@ function createButtons() {
 
 // Function to load flashcards for the selected dataset
 function loadFlashcards(data) {
-    const contentContainer = document.getElementById('contentContainer'); // Get content container
-    const flashcardContainer = document.createElement('div');
-    flashcardContainer.classList.add('flashcard-container');
+    const flashcardContainer = document.querySelector('.flashcard-container');
     
-    // Clear previous content and add the new flashcard container
-    contentContainer.innerHTML = ''; 
-    contentContainer.appendChild(flashcardContainer);
+    // If flashcard container doesn't exist, create it
+    let newFlashcardContainer = flashcardContainer;
+    if (!newFlashcardContainer) {
+        newFlashcardContainer = document.createElement('div');
+        newFlashcardContainer.classList.add('flashcard-container');
+        document.getElementById('contentContainer').appendChild(newFlashcardContainer);
+    }
 
-    // Clear previous flashcards in the container
-    flashcardContainer.innerHTML = ''; 
+    // Clear the existing flashcards
+    newFlashcardContainer.innerHTML = ''; 
 
     // Loop through the data to create flashcards
     data.forEach(item => {

@@ -1,15 +1,17 @@
-let activeButton = null;
-
 // Function to handle showing lessons in table format
 function showLessons() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = ''; // Clear previous content
 
-    // Loop through each dataset in dataSets
+    // Disable the Lessons button and enable the Test button
+    document.getElementById('lessonButton').disabled = true;
+    document.getElementById('testButton').disabled = false;
+
+    // Loop through each dataset in dataSets and create tables
     dataSets.forEach(dataset => {
         const table = document.createElement('table');
         const caption = document.createElement('caption');
-        caption.textContent = dataset.name.toUpperCase();
+        caption.innerHTML = `<h2>${dataset.name.toUpperCase()}</h2>`;  // Use <h2> in caption
         table.appendChild(caption);
 
         const headerRow = document.createElement('tr');
@@ -20,13 +22,21 @@ function showLessons() {
         `;
         table.appendChild(headerRow);
 
-        dataset.value.forEach(item => {
+        dataset.value.forEach((item, index) => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${item.Polish}</td>
                 <td>${item.Pronunciation}</td>
                 <td>${item.English}</td>
             `;
+
+            // Apply alternating row background color
+            if (index % 2 === 0) {
+                row.style.backgroundColor = '#f4f4f4';  // Light gray for even rows
+            } else {
+                row.style.backgroundColor = '#fff';     // White for odd rows
+            }
+
             table.appendChild(row);
         });
 
@@ -38,6 +48,10 @@ function showLessons() {
 function showTest() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = ''; // Clear previous content
+
+    // Disable the Test button and enable the Lessons button
+    document.getElementById('testButton').disabled = true;
+    document.getElementById('lessonButton').disabled = false;
 
     const buttonContainer = document.createElement('div');
     buttonContainer.classList.add('button-container');

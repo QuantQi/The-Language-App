@@ -2,122 +2,385 @@
 const dataSets = [];
 
 const greetings = [
-    {Pronunciation: "nomoshkar", English: "Hello"},
-    {Pronunciation: "shubho shokal", English: "Good morning"},
-    {Pronunciation: "shubho bikel", English: "Good evening"},
-    {Pronunciation: "shubho raatri", English: "Good night"},
-    {Pronunciation: "bidai", English: "Goodbye"},
-    {Pronunciation: "dhonnobaad", English: "Thank you"},
-    {Pronunciation: "doa korun", English: "Please"},
-    {Pronunciation: "khoma korun", English: "Sorry"},
-    {Pronunciation: "haa", English: "Yes"},
-    {Pronunciation: "naa", English: "No"}
+    {Phrase: "Nomoshkar", Pronunciation: "no-mosh-kar", English: "Hello"},
+    {Phrase: "Shubho Shokal", Pronunciation: "shu-bho sho-kal", English: "Good morning"},
+    {Phrase: "Shubho Shondha", Pronunciation: "shu-bho shon-dha", English: "Good evening"},
+    {Phrase: "Shubho Ratri", Pronunciation: "shu-bho ra-tri", English: "Good night"},
+    {Phrase: "Biday", Pronunciation: "bi-day", English: "Goodbye"},
+    {Phrase: "Dhonnobad", Pronunciation: "dhon-no-bad", English: "Thank you"},
+    {Phrase: "Doya Kore", Pronunciation: "do-ya ko-re", English: "Please"},
+    {Phrase: "Dukkho Korchi", Pronunciation: "duk-kho kor-chi", English: "Sorry"},
+    {Phrase: "Haan", Pronunciation: "haan", English: "Yes"},
+    {Phrase: "Na", Pronunciation: "na", English: "No"}
 ];
 
 dataSets.push({ name: 'Greetings', value: greetings });
 
 const cardinalNumbers = [
-    {Pronunciation: "ek", English: "one"},
-    {Pronunciation: "dui", English: "two"},
-    {Pronunciation: "tin", English: "three"},
-    {Pronunciation: "char", English: "four"},
-    {Pronunciation: "paach", English: "five"},
-    {Pronunciation: "chhoy", English: "six"},
-    {Pronunciation: "shaat", English: "seven"},
-    {Pronunciation: "aath", English: "eight"},
-    {Pronunciation: "noi", English: "nine"},
-    {Pronunciation: "dosh", English: "ten"}
+    {Phrase: "Ek", Pronunciation: "ek", English: "one"},
+    {Phrase: "Dui", Pronunciation: "dui", English: "two"},
+    {Phrase: "Tin", Pronunciation: "tin", English: "three"},
+    {Phrase: "Char", Pronunciation: "char", English: "four"},
+    {Phrase: "Pach", Pronunciation: "pach", English: "five"},
+    {Phrase: "Choy", Pronunciation: "choy", English: "six"},
+    {Phrase: "Shat", Pronunciation: "shat", English: "seven"},
+    {Phrase: "Aath", Pronunciation: "aath", English: "eight"},
+    {Phrase: "Noi", Pronunciation: "noi", English: "nine"},
+    {Phrase: "Dosh", Pronunciation: "dosh", English: "ten"}
 ];
 
 dataSets.push({ name: 'Cardinal Numbers', value: cardinalNumbers });
 
 const ordinalNumbers = [
-    {Pronunciation: "prothom", English: "first"},
-    {Pronunciation: "ditiyo", English: "second"},
-    {Pronunciation: "tritiyo", English: "third"},
-    {Pronunciation: "choturtho", English: "fourth"},
-    {Pronunciation: "ponchom", English: "fifth"},
-    {Pronunciation: "shostho", English: "sixth"},
-    {Pronunciation: "shoptom", English: "seventh"},
-    {Pronunciation: "oshtom", English: "eighth"},
-    {Pronunciation: "nobom", English: "ninth"},
-    {Pronunciation: "doshom", English: "tenth"}
+    {Phrase: "Prothom", Pronunciation: "pro-thom", English: "first"},
+    {Phrase: "Ditiyo", Pronunciation: "di-ti-yo", English: "second"},
+    {Phrase: "Tritiyo", Pronunciation: "tri-ti-yo", English: "third"},
+    {Phrase: "Choturtho", Pronunciation: "cho-tur-tho", English: "fourth"},
+    {Phrase: "Panchom", Pronunciation: "pan-chom", English: "fifth"},
+    {Phrase: "Shoshto", Pronunciation: "shosh-to", English: "sixth"},
+    {Phrase: "Shoptom", Pronunciation: "shop-tom", English: "seventh"},
+    {Phrase: "Oshtom", Pronunciation: "osh-tom", English: "eighth"},
+    {Phrase: "Nobom", Pronunciation: "no-bom", English: "ninth"},
+    {Phrase: "Doshom", Pronunciation: "do-shom", English: "tenth"}
 ];
 
 dataSets.push({ name: 'Ordinal Numbers', value: ordinalNumbers });
-
 const colors = [
-    {Pronunciation: "kaalo", English: "black"},
-    {Pronunciation: "shada", English: "white"},
-    {Pronunciation: "lal", English: "red"},
-    {Pronunciation: "shobuj", English: "green"},
-    {Pronunciation: "neel", English: "blue"},
-    {Pronunciation: "holud", English: "yellow"},
-    {Pronunciation: "komola", English: "orange"},
-    {Pronunciation: "beguni", English: "purple"},
-    {Pronunciation: "golaapi", English: "pink"},
-    {Pronunciation: "badami", English: "brown"}
+    {Phrase: "kalo", Pronunciation: "kah-lo", English: "black"},
+    {Phrase: "shada", Pronunciation: "sha-da", English: "white"},
+    {Phrase: "lal", Pronunciation: "lal", English: "red"},
+    {Phrase: "sobuj", Pronunciation: "so-booj", English: "green"},
+    {Phrase: "neel", Pronunciation: "neel", English: "blue"},
+    {Phrase: "holud", Pronunciation: "ho-lud", English: "yellow"},
+    {Phrase: "komola", Pronunciation: "ko-mo-la", English: "orange"},
+    {Phrase: "beguni", Pronunciation: "be-gu-ni", English: "purple"},
+    {Phrase: "golapi", Pronunciation: "go-la-pi", English: "pink"},
+    {Phrase: "badami", Pronunciation: "ba-da-mi", English: "brown"}
 ];
 
 dataSets.push({ name: 'Colors', value: colors });
 
 const family = [
-    {Pronunciation: "poribar", English: "family"},
-    {Pronunciation: "ma", English: "mother"},
-    {Pronunciation: "baba", English: "father"},
-    {Pronunciation: "bhai bon", English: "siblings"},
-    {Pronunciation: "bon", English: "sister"},
-    {Pronunciation: "bhai", English: "brother"},
-    {Pronunciation: "mey", English: "daughter"},
-    {Pronunciation: "chele", English: "son"},
-    {Pronunciation: "dida/dadi", English: "grandmother"},
-    {Pronunciation: "dadu/nana", English: "grandfather"}
+    {Phrase: "poribar", Pronunciation: "po-ri-bar", English: "family"},
+    {Phrase: "ma", Pronunciation: "ma", English: "mother"},
+    {Phrase: "baba", Pronunciation: "ba-ba", English: "father"},
+    {Phrase: "bhai bon", Pronunciation: "bhai bon", English: "siblings"},
+    {Phrase: "bon", Pronunciation: "bon", English: "sister"},
+    {Phrase: "bhai", Pronunciation: "bhai", English: "brother"},
+    {Phrase: "mey", Pronunciation: "mey", English: "daughter"},
+    {Phrase: "chele", Pronunciation: "che-le", English: "son"},
+    {Phrase: "dida", Pronunciation: "di-da", English: "grandmother"},
+    {Phrase: "dadu", Pronunciation: "da-du", English: "grandfather"}
 ];
 
 dataSets.push({ name: 'Family', value: family });
 
 const bodyParts = [
-    {Pronunciation: "shorir", English: "body"},
-    {Pronunciation: "matha", English: "head"},
-    {Pronunciation: "chul", English: "hair"},
-    {Pronunciation: "chokh", English: "eyes"},
-    {Pronunciation: "naak", English: "nose"},
-    {Pronunciation: "mukh", English: "mouth"},
-    {Pronunciation: "daat", English: "teeth"},
-    {Pronunciation: "kaan", English: "ears"},
-    {Pronunciation: "haat", English: "arm"},
-    {Pronunciation: "hath", English: "hand"}
+    {Phrase: "shorir", Pronunciation: "sho-rir", English: "body"},
+    {Phrase: "matha", Pronunciation: "ma-tha", English: "head"},
+    {Phrase: "chul", Pronunciation: "chul", English: "hair"},
+    {Phrase: "chokh", Pronunciation: "chokh", English: "eyes"},
+    {Phrase: "nak", Pronunciation: "nak", English: "nose"},
+    {Phrase: "mukh", Pronunciation: "mukh", English: "mouth"},
+    {Phrase: "dat", Pronunciation: "dat", English: "teeth"},
+    {Phrase: "kan", Pronunciation: "kan", English: "ears"},
+    {Phrase: "haat", Pronunciation: "haat", English: "arm"},
+    {Phrase: "hat", Pronunciation: "hat", English: "hand"}
 ];
 
 dataSets.push({ name: 'Body Parts', value: bodyParts });
 
 const animals = [
-    {Pronunciation: "prani", English: "animal"},
-    {Pronunciation: "kukkur", English: "dog"},
-    {Pronunciation: "biral", English: "cat"},
-    {Pronunciation: "pakhi", English: "bird"},
-    {Pronunciation: "machh", English: "fish"},
-    {Pronunciation: "ghora", English: "horse"},
-    {Pronunciation: "goru", English: "cow"},
-    {Pronunciation: "shukor", English: "pig"},
-    {Pronunciation: "bheder", English: "sheep"},
-    {Pronunciation: "murgi", English: "chicken"}
+    {Phrase: "prani", Pronunciation: "pra-ni", English: "animal"},
+    {Phrase: "kukkur", Pronunciation: "kuk-kur", English: "dog"},
+    {Phrase: "biral", Pronunciation: "bi-ral", English: "cat"},
+    {Phrase: "pakhi", Pronunciation: "pa-khi", English: "bird"},
+    {Phrase: "machh", Pronunciation: "machh", English: "fish"},
+    {Phrase: "ghora", Pronunciation: "gho-ra", English: "horse"},
+    {Phrase: "goru", Pronunciation: "go-ru", English: "cow"},
+    {Phrase: "shukar", Pronunciation: "shu-kar", English: "pig"},
+    {Phrase: "bheer", Pronunciation: "bheer", English: "sheep"},
+    {Phrase: "murgi", Pronunciation: "mur-gi", English: "chicken"}
 ];
 
 dataSets.push({ name: 'Animals', value: animals });
 
 const food = [
-    {Pronunciation: "khaddo", English: "food"},
-    {Pronunciation: "ruti", English: "bread"},
-    {Pronunciation: "apple", English: "apple"},
-    {Pronunciation: "doodh", English: "milk"},
-    {Pronunciation: "pani", English: "water"},
-    {Pronunciation: "cha", English: "tea"},
-    {Pronunciation: "coffee", English: "coffee"},
-    {Pronunciation: "dim", English: "egg"},
-    {Pronunciation: "mangsho", English: "meat"},
-    {Pronunciation: "chaal", English: "rice"}
+    {Phrase: "khaddo", Pronunciation: "khad-do", English: "food"},
+    {Phrase: "ruti", Pronunciation: "ru-ti", English: "bread"},
+    {Phrase: "appl", Pronunciation: "ap-pl", English: "apple"},
+    {Phrase: "dudh", Pronunciation: "dudh", English: "milk"},
+    {Phrase: "pani", Pronunciation: "pa-ni", English: "water"},
+    {Phrase: "cha", Pronunciation: "cha", English: "tea"},
+    {Phrase: "kofi", Pronunciation: "ko-fi", English: "coffee"},
+    {Phrase: "dim", Pronunciation: "dim", English: "egg"},
+    {Phrase: "mangsho", Pronunciation: "mang-sho", English: "meat"},
+    {Phrase: "chal", Pronunciation: "chal", English: "rice"}
 ];
 
 dataSets.push({ name: 'Food', value: food });
 
+const drinks = [
+    {Phrase: "panio", Pronunciation: "pa-ni-o", English: "drink"},
+    {Phrase: "mod", Pronunciation: "mod", English: "wine"},
+    {Phrase: "biyar", Pronunciation: "bi-yar", English: "beer"},
+    {Phrase: "ras", Pronunciation: "ras", English: "juice"},
+    {Phrase: "cha", Pronunciation: "cha", English: "tea"},
+    {Phrase: "kofi", Pronunciation: "ko-fi", English: "coffee"},
+    {Phrase: "pani", Pronunciation: "pa-ni", English: "water"},
+    {Phrase: "dudh", Pronunciation: "dudh", English: "milk"},
+    {Phrase: "cola", Pronunciation: "ko-la", English: "cola"},
+    {Phrase: "whisky", Pronunciation: "whis-ki", English: "whisky"}
+];
+
+dataSets.push({ name: 'Drinks', value: drinks });
+
+const fruits = [
+    {Phrase: "fol", Pronunciation: "fol", English: "fruit"},
+    {Phrase: "appl", Pronunciation: "ap-pl", English: "apple"},
+    {Phrase: "kola", Pronunciation: "ko-la", English: "banana"},
+    {Phrase: "komola", Pronunciation: "ko-mo-la", English: "orange"},
+    {Phrase: "naspathi", Pronunciation: "nas-pa-thi", English: "pear"},
+    {Phrase: "alu bukhara", Pronunciation: "a-lu bu-kha-ra", English: "plum"},
+    {Phrase: "strawberry", Pronunciation: "straw-ber-ry", English: "strawberry"},
+    {Phrase: "angur", Pronunciation: "an-gur", English: "grape"},
+    {Phrase: "tarbuj", Pronunciation: "tar-buj", English: "watermelon"},
+    {Phrase: "anaros", Pronunciation: "a-na-ros", English: "pineapple"}
+];
+
+dataSets.push({ name: 'Fruits', value: fruits });
+
+const vegetables = [
+    {Phrase: "sobji", Pronunciation: "sob-ji", English: "vegetable"},
+    {Phrase: "gajor", Pronunciation: "ga-jor", English: "carrot"},
+    {Phrase: "alu", Pronunciation: "a-lu", English: "potato"},
+    {Phrase: "tomato", Pronunciation: "to-ma-to", English: "tomato"},
+    {Phrase: "shosha", Pronunciation: "sho-sha", English: "cucumber"},
+    {Phrase: "peyaj", Pronunciation: "pe-yaj", English: "onion"},
+    {Phrase: "bandhakopi", Pronunciation: "ban-dha-ko-pi", English: "cabbage"},
+    {Phrase: "capsicum", Pronunciation: "cap-si-cum", English: "pepper"},
+    {Phrase: "broccoli", Pronunciation: "broc-co-li", English: "broccoli"},
+    {Phrase: "celery", Pronunciation: "ce-le-ry", English: "celery"}
+];
+
+dataSets.push({ name: 'Vegetables', value: vegetables });
+
+const countries = [
+    {Phrase: "desh", Pronunciation: "desh", English: "country"},
+    {Phrase: "Bangladesh", Pronunciation: "Bang-la-desh", English: "Bangladesh"},
+    {Phrase: "Bharot", Pronunciation: "Bha-rot", English: "India"},
+    {Phrase: "France", Pronunciation: "France", English: "France"},
+    {Phrase: "Italy", Pronunciation: "Italy", English: "Italy"},
+    {Phrase: "Spain", Pronunciation: "Spain", English: "Spain"},
+    {Phrase: "Russia", Pronunciation: "Russia", English: "Russia"},
+    {Phrase: "America", Pronunciation: "A-me-ri-ca", English: "United States"},
+    {Phrase: "China", Pronunciation: "Chi-na", English: "China"},
+    {Phrase: "Japan", Pronunciation: "Ja-pan", English: "Japan"}
+];
+
+dataSets.push({ name: 'Countries', value: countries });
+const cities = [
+    {Phrase: "shohor", Pronunciation: "sho-hor", English: "city"},
+    {Phrase: "Dhaka", Pronunciation: "Dha-ka", English: "Dhaka"},
+    {Phrase: "Chittagong", Pronunciation: "Chit-ta-gong", English: "Chittagong"},
+    {Phrase: "Khulna", Pronunciation: "Khu-lna", English: "Khulna"},
+    {Phrase: "Rajshahi", Pronunciation: "Raj-sha-hi", English: "Rajshahi"},
+    {Phrase: "Sylhet", Pronunciation: "Syl-het", English: "Sylhet"},
+    {Phrase: "Barisal", Pronunciation: "Ba-ri-sal", English: "Barisal"},
+    {Phrase: "Rangpur", Pronunciation: "Rang-pur", English: "Rangpur"},
+    {Phrase: "Comilla", Pronunciation: "Co-mil-la", English: "Comilla"},
+    {Phrase: "Narayanganj", Pronunciation: "Na-ra-yan-ganj", English: "Narayanganj"}
+];
+
+dataSets.push({ name: 'Cities', value: cities });
+
+const transport = [
+    {Phrase: "poribohon", Pronunciation: "po-ri-bo-hon", English: "transport"},
+    {Phrase: "gari", Pronunciation: "ga-ri", English: "car"},
+    {Phrase: "bicycle", Pronunciation: "bi-cy-cle", English: "bicycle"},
+    {Phrase: "bus", Pronunciation: "bus", English: "bus"},
+    {Phrase: "tram", Pronunciation: "tram", English: "tram"},
+    {Phrase: "train", Pronunciation: "train", English: "train"},
+    {Phrase: "metro", Pronunciation: "me-tro", English: "subway"},
+    {Phrase: "taxi", Pronunciation: "taxi", English: "taxi"},
+    {Phrase: "biman", Pronunciation: "bi-man", English: "airplane"},
+    {Phrase: "jahaj", Pronunciation: "ja-haj", English: "ship"}
+];
+
+dataSets.push({ name: 'Transport', value: transport });
+
+const professions = [
+    {Phrase: "peshabisheshoggo", Pronunciation: "pe-sha-bi-she-shog-go", English: "profession"},
+    {Phrase: "shikkhok", Pronunciation: "shik-khok", English: "teacher"},
+    {Phrase: "daktar", Pronunciation: "dak-tar", English: "doctor"},
+    {Phrase: "prokousholi", Pronunciation: "pro-kou-sho-li", English: "engineer"},
+    {Phrase: "ainggo", Pronunciation: "ain-go", English: "lawyer"},
+    {Phrase: "ranna", Pronunciation: "ran-na", English: "chef"},
+    {Phrase: "waiter", Pronunciation: "wai-ter", English: "waiter"},
+    {Phrase: "actor", Pronunciation: "ac-tor", English: "actor"},
+    {Phrase: "gayiok", Pronunciation: "ga-yi-ok", English: "singer"},
+    {Phrase: "khelowar", Pronunciation: "khe-lo-war", English: "athlete"}
+];
+
+dataSets.push({ name: 'Professions', value: professions });
+
+const weather = [
+    {Phrase: "abohawa", Pronunciation: "a-bo-ha-wa", English: "weather"},
+    {Phrase: "rod", Pronunciation: "rod", English: "sun"},
+    {Phrase: "brishti", Pronunciation: "brishti", English: "rain"},
+    {Phrase: "tushar", Pronunciation: "tu-shar", English: "snow"},
+    {Phrase: "batash", Pronunciation: "ba-tash", English: "wind"},
+    {Phrase: "megh", Pronunciation: "megh", English: "cloud"},
+    {Phrase: "jhor", Pronunciation: "jhor", English: "storm"},
+    {Phrase: "rainbow", Pronunciation: "rain-bow", English: "rainbow"},
+    {Phrase: "kuasha", Pronunciation: "kua-sha", English: "fog"},
+    {Phrase: "shila", Pronunciation: "shi-la", English: "hail"}
+];
+
+dataSets.push({ name: 'Weather', value: weather });
+
+const seasons = [
+    {Phrase: "ritu", Pronunciation: "ri-tu", English: "season"},
+    {Phrase: "boshonto", Pronunciation: "bo-shon-to", English: "spring"},
+    {Phrase: "grishsho", Pronunciation: "grish-sho", English: "summer"},
+    {Phrase: "shorot", Pronunciation: "sho-rot", English: "autumn"},
+    {Phrase: "shit", Pronunciation: "shit", English: "winter"}
+];
+
+dataSets.push({ name: 'Seasons', value: seasons });
+
+const months = [
+    {Phrase: "mash", Pronunciation: "mash", English: "month"},
+    {Phrase: "January", Pronunciation: "Ja-nu-a-ry", English: "January"},
+    {Phrase: "February", Pronunciation: "Feb-ru-a-ry", English: "February"},
+    {Phrase: "March", Pronunciation: "March", English: "March"},
+    {Phrase: "April", Pronunciation: "A-pril", English: "April"},
+    {Phrase: "May", Pronunciation: "May", English: "May"},
+    {Phrase: "June", Pronunciation: "June", English: "June"},
+    {Phrase: "July", Pronunciation: "Ju-ly", English: "July"},
+    {Phrase: "August", Pronunciation: "Au-gust", English: "August"},
+    {Phrase: "September", Pronunciation: "Sep-tem-ber", English: "September"},
+    {Phrase: "October", Pronunciation: "Oc-to-ber", English: "October"},
+    {Phrase: "November", Pronunciation: "No-vem-ber", English: "November"},
+    {Phrase: "December", Pronunciation: "De-cem-ber", English: "December"}
+];
+
+dataSets.push({ name: 'Months', value: months });
+
+const daysOfWeek = [
+    {Phrase: "shoptaher din", Pronunciation: "shop-ta-her din", English: "day of the week"},
+    {Phrase: "Shombar", Pronunciation: "Shom-bar", English: "Monday"},
+    {Phrase: "Mongolbar", Pronunciation: "Mon-gol-bar", English: "Tuesday"},
+    {Phrase: "Budhbar", Pronunciation: "Budh-bar", English: "Wednesday"},
+    {Phrase: "Brihospotibar", Pronunciation: "Bri-hos-po-ti-bar", English: "Thursday"},
+    {Phrase: "Shukrobar", Pronunciation: "Shuk-ro-bar", English: "Friday"},
+    {Phrase: "Shonibar", Pronunciation: "Sho-ni-bar", English: "Saturday"},
+    {Phrase: "Robibar", Pronunciation: "Ro-bi-bar", English: "Sunday"}
+];
+
+dataSets.push({ name: 'Days of the Week', value: daysOfWeek });
+
+const phrases = [
+    {Phrase: "tumi kemon acho?", Pronunciation: "tu-mi ke-mon a-cho", English: "how are you?"},
+    {Phrase: "dhonnobad, ami bhalo achi", Pronunciation: "dhon-no-bad, a-mi bha-lo a-chi", English: "thank you, I'm good"},
+    {Phrase: "doya kore, ami bujhte parini", Pronunciation: "do-ya ko-re, a-mi bujh-te pa-ri-ni", English: "I'm sorry, I don't understand"},
+    {Phrase: "eta koto dam?", Pronunciation: "e-ta ko-to dam", English: "how much does it cost?"},
+    {Phrase: "toilete kothay?", Pronunciation: "to-i-le-te ko-thay", English: "where is the bathroom?"},
+    {Phrase: "eta ki?", Pronunciation: "e-ta ki", English: "what is this?"},
+    {Phrase: "tumi ki ingreji bolo?", Pronunciation: "tu-mi ki in-gre-ji bo-lo", English: "do you speak English?"},
+    {Phrase: "doya kore abar bolo", Pronunciation: "do-ya ko-re a-bar bo-lo", English: "please repeat"},
+    {Phrase: "tomar naam ki?", Pronunciation: "to-mar naam ki", English: "what's your name?"},
+    {Phrase: "tomar shathe dekha hoye bhalo laglo", Pronunciation: "to-mar sha-the de-kha ho-ye bha-lo lag-lo", English: "nice to meet you"}
+];
+
+dataSets.push({ name: 'Phrases', value: phrases });
+
+const adjectives = [
+    {Phrase: "bisheshon", Pronunciation: "bi-she-shon", English: "adjective"},
+    {Phrase: "boro", Pronunciation: "bo-ro", English: "big"},
+    {Phrase: "chhoto", Pronunciation: "chho-to", English: "small"},
+    {Phrase: "druto", Pronunciation: "dru-to", English: "fast"},
+    {Phrase: "dhire", Pronunciation: "dhi-re", English: "slow"},
+    {Phrase: "bhalo", Pronunciation: "bha-lo", English: "good"},
+    {Phrase: "kharaap", Pronunciation: "kha-raap", English: "bad"},
+    {Phrase: "shundor", Pronunciation: "shun-dor", English: "beautiful"},
+    {Phrase: "kubja", Pronunciation: "kub-ja", English: "ugly"},
+    {Phrase: "jubok", Pronunciation: "ju-bok", English: "young"},
+    {Phrase: "briddho", Pronunciation: "brid-dho", English: "old"}
+];
+
+dataSets.push({ name: 'Adjectives', value: adjectives });
+
+const verbs = [
+    {Phrase: "kriya", Pronunciation: "kri-ya", English: "verb"},
+    {Phrase: "khete", Pronunciation: "khe-te", English: "to eat"},
+    {Phrase: "peete", Pronunciation: "pee-te", English: "to drink"},
+    {Phrase: "ghumate", Pronunciation: "ghu-ma-te", English: "to sleep"},
+    {Phrase: "dourate", Pronunciation: "dou-ra-te", English: "to run"},
+    {Phrase: "leapte", Pronunciation: "le-ap-te", English: "to jump"},
+    {Phrase: "lekhte", Pronunciation: "lekh-te", English: "to write"},
+    {Phrase: "porhte", Pronunciation: "porh-te", English: "to read"},
+    {Phrase: "bolte", Pronunciation: "bol-te", English: "to speak"},
+    {Phrase: "shunte", Pronunciation: "shun-te", English: "to listen"},
+    {Phrase: "dekhte", Pronunciation: "dekh-te", English: "to look"}
+];
+
+dataSets.push({ name: 'Verbs', value: verbs });
+
+const prepositions = [
+    {Phrase: "protipadok", Pronunciation: "pro-ti-pa-dok", English: "preposition"},
+    {Phrase: "moddhe", Pronunciation: "mod-dhe", English: "in"},
+    {Phrase: "opore", Pronunciation: "o-po-re", English: "on"},
+    {Phrase: "niche", Pronunciation: "ni-che", English: "under"},
+    {Phrase: "upore", Pronunciation: "u-po-re", English: "above"},
+    {Phrase: "age", Pronunciation: "a-ge", English: "before"},
+    {Phrase: "porhe", Pronunciation: "po-rhe", English: "after"},
+    {Phrase: "pashe", Pronunciation: "pa-she", English: "next to"},
+    {Phrase: "kache", Pronunciation: "ka-che", English: "by"},
+    {Phrase: "moddhe", Pronunciation: "mod-dhe", English: "between"},
+    {Phrase: "shathe", Pronunciation: "sha-the", English: "with"}
+];
+
+dataSets.push({ name: 'Prepositions', value: prepositions });
+
+const conjunctions = [
+    {Phrase: "juktibodhak", Pronunciation: "juk-ti-bo-dhak", English: "conjunction"},
+    {Phrase: "ebong", Pronunciation: "e-bong", English: "and"},
+    {Phrase: "ba", Pronunciation: "ba", English: "or"},
+    {Phrase: "kintu", Pronunciation: "kin-tu", English: "but"},
+    {Phrase: "jokhon", Pronunciation: "jo-khon", English: "when"},
+    {Phrase: "jodi", Pronunciation: "jo-di", English: "if"},
+    {Phrase: "karon", Pronunciation: "ka-ron", English: "because"},
+    {Phrase: "jano", Pronunciation: "ja-no", English: "in order to"},
+    {Phrase: "athoba", Pronunciation: "a-tho-ba", English: "or"},
+    {Phrase: "tai", Pronunciation: "tai", English: "so"},
+    {Phrase: "jodio", Pronunciation: "jo-di-o", English: "although"}
+];
+
+dataSets.push({ name: 'Conjunctions', value: conjunctions });
+
+const questionWords = [
+    {Phrase: "proshno shobdo", Pronunciation: "pro-shno shob-do", English: "question word"},
+    {Phrase: "ki", Pronunciation: "ki", English: "what"},
+    {Phrase: "ke", Pronunciation: "ke", English: "who"},
+    {Phrase: "kothay", Pronunciation: "ko-thay", English: "where"},
+    {Phrase: "kokhon", Pronunciation: "ko-khon", English: "when"},
+    {Phrase: "keno", Pronunciation: "ke-no", English: "why"},
+    {Phrase: "koto", Pronunciation: "ko-to", English: "how much"},
+    {Phrase: "kemon", Pronunciation: "ke-mon", English: "how"},
+    {Phrase: "ki", Pronunciation: "ki", English: "whether"},
+    {Phrase: "kon", Pronunciation: "kon", English: "which"},
+    {Phrase: "kar", Pronunciation: "kar", English: "whose"}
+];
+
+dataSets.push({ name: 'Question Words', value: questionWords });
+
+const time = [
+    {Phrase: "shomoy", Pronunciation: "sho-moy", English: "time"},
+    {Phrase: "ghonta", Pronunciation: "ghon-ta", English: "hour"},
+    {Phrase: "minit", Pronunciation: "mi-nit", English: "minute"},
+    {Phrase: "sekend", Pronunciation: "se-kend", English: "second"},
+    {Phrase: "din", Pronunciation: "din", English: "day"}
+];
+
+dataSets.push({ name: 'Time', value: time });

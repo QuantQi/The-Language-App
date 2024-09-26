@@ -50,19 +50,19 @@ function loadFlashcards(data) {
 
     // Loop through the data to create flashcards
     data.forEach(item => {
-        createFlashcard(item.Polish, item.Pronunciation, item.English);
+        createFlashcard(item.Phrase, item.Pronunciation, item.English);
     });
 }
 
 // Function to create a flashcard
-function createFlashcard(polish, pronunciation, english) {
+function createFlashcard(phrase, pronunciation, english) {
     const flashcard = document.createElement('div');
     flashcard.classList.add('flashcard');
     flashcard.onclick = () => flipCard(flashcard);
 
     const front = document.createElement('div');
     front.classList.add('front');
-    front.innerHTML = polish;
+    front.innerHTML = phrase;
 
     const back = document.createElement('div');
     back.classList.add('back');

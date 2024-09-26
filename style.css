@@ -63,7 +63,8 @@ body {
 
 /* Table Styling for Lessons */
 table {
-    width: 80%;
+    width: 100%;
+    max-width: 600px; /* Set max width of the table */
     margin: 20px auto;
     border-collapse: collapse;
     background-color: #fff;
@@ -73,7 +74,7 @@ table {
 th, td {
     padding: 10px;
     border: 1px solid #ddd;
-    text-align: center;
+    text-align: left; /* Left-align the text inside the table */
 }
 
 caption h2 {
@@ -81,6 +82,15 @@ caption h2 {
     margin-bottom: 10px;
     font-weight: bold;
     color: #2196F3; /* Material Blue */
+}
+
+/* Alternate row background colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White background for odd rows */
 }
 
 /* Flashcard Container */
@@ -144,7 +154,7 @@ caption h2 {
     transform: rotateY(180deg);
 }
 
-.flashcard.flipped .back {
+flashcard.flipped .back {
     transform: rotateY(360deg);
 }
 

@@ -3,6 +3,13 @@
 // Function to dynamically create buttons for each dataset in dataSets
 function createButtons() {
     const buttonContainer = document.querySelector('.button-container');
+    
+    // Check if the buttonContainer exists in the DOM
+    if (!buttonContainer) {
+        console.error('buttonContainer element is not found in the DOM');
+        return;
+    }
+
     buttonContainer.innerHTML = '';  // Clear the button container
 
     // Dynamically create buttons for each data set in dataSets
@@ -10,7 +17,7 @@ function createButtons() {
         const button = document.createElement('button');
         button.textContent = dataset.name;  // Use the dataset name as the button label
         button.onclick = () => {
-            highlightButton(button); // Highlight the clicked button using the highlightButton function
+            highlightButton(button); // Highlight the clicked button
             loadFlashcards(dataset.value);  // Load the flashcards for the selected dataset
         };
         buttonContainer.appendChild(button);

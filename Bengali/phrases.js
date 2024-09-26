@@ -1,5 +1,5 @@
 // Initialize the array with the existing constants
-const dataSets = [];
+//const dataSets = [];
 
 const greetings = [
     {Phrase: "Nomoshkar", Pronunciation: "no-mosh-kar", English: "Hello"},

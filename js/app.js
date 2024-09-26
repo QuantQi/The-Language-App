@@ -10,21 +10,21 @@ function loadLanguage(language) {
         currentLanguageDataSets = bengali_dataSets;  // Use Bengali dataset
     }
 
-    // Create buttons based on the selected language dataset
+    // Now create the buttons based on the selected language's dataset
     createButtons(currentLanguageDataSets);
 }
 
 // Function to dynamically create buttons for each dataset in dataSets
 function createButtons(dataSets) {
     const buttonContainer = document.querySelector('.button-container');
-    buttonContainer.innerHTML = '';  // Clear the button container
+    buttonContainer.innerHTML = '';  // Clear any previous buttons
 
-    // Dynamically create buttons for each data set in dataSets
+    // Create buttons for each dataset in dataSets
     dataSets.forEach((dataset, index) => {
         const button = document.createElement('button');
         button.textContent = dataset.name;  // Use the dataset name as the button label
         button.onclick = () => {
-            highlightButton(button); // Highlight the clicked button using the highlightButton function
+            highlightButton(button); // Highlight the clicked button
             loadFlashcards(dataset.value);  // Load the flashcards for the selected dataset
         };
         buttonContainer.appendChild(button);

@@ -1,9 +1,32 @@
 // app.js
 
-// Initialize active button
-let activeButton = null;
+// Global variable to hold the selected language's data
+let languageFolder = '';
 
-// Show lessons when the "Lessons" button is clicked
+// Function to load the selected language
+function loadLanguage(language) {
+    languageFolder = language;
+
+    // Remove the old script if it exists
+    const oldScript = document.getElementById('languageScript');
+    if (oldScript) {
+        oldScript.remove();
+    }
+
+    // Dynamically load the language-specific phrases.js file
+    const script = document.createElement('script');
+    script.src = `${language}/phrases.js`;
+    script.id = 'languageScript';
+    document.body.appendChild(script);
+
+    // After loading the language data, show the lessons and test buttons
+    script.onload = function() {
+        document.getElementById('menuContainer').style.display = 'flex';
+        document.getElementById('contentContainer').innerHTML = ''; // Clear previous content
+    };
+}
+
+// Function to show lessons
 function showLessons() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = ''; // Clear previous content
@@ -15,7 +38,7 @@ function showLessons() {
     displayLessons();  // Function from lessons.js
 }
 
-// Show test when the "Test" button is clicked
+// Function to show test flashcards
 function showTest() {
     const contentContainer = document.getElementById('contentContainer');
     contentContainer.innerHTML = ''; // Clear previous content
@@ -23,10 +46,6 @@ function showTest() {
     // Disable the Test button and enable the Lessons button
     document.getElementById('testButton').disabled = true;
     document.getElementById('lessonButton').disabled = false;
-
-    const buttonContainer = document.createElement('div');
-    buttonContainer.classList.add('button-container');
-    contentContainer.appendChild(buttonContainer);
 
     createButtons(); // Function from flashcards.js
 }

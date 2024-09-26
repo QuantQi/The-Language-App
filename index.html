@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polish Flashcards</title>
+    <title>Language Flashcards</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="menu-container" id="menuContainer">
+    <!-- Language selection buttons -->
+    <div class="menu-container" id="languageMenuContainer">
+        <button class="large-button" onclick="loadLanguage('Polish')">Polish</button>
+        <button class="large-button" onclick="loadLanguage('Bengali')">Bengali</button>
+    </div>
+
+    <!-- Dynamic buttons for Lessons and Test will appear here -->
+    <div class="menu-container" id="menuContainer" style="display:none;">
         <button class="large-button" id="lessonButton" onclick="showLessons()">Lessons</button>
         <button class="large-button" id="testButton" onclick="showTest()">Test</button>
     </div>
 
     <div class="content-container" id="contentContainer">
-        <!-- Content (either lessons or flashcards) will be displayed here -->
+        <!-- Lessons or test will be displayed here -->
     </div>
 
-    <!-- Include scripts -->
-    <script src="Polish/phrases.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/lessons.js"></script>
-    <script src="js/flashcards.js"></script>
-    <script src="js/app.js"></script>
+    <!-- Scripts -->
+    <script src="js/utils.js"></script> <!-- Utility functions -->
+    <script src="js/lessons.js"></script> <!-- Lessons logic -->
+    <script src="js/flashcards.js"></script> <!-- Flashcards logic -->
+    <script src="js/app.js"></script> <!-- Main app logic -->
 </body>
 </html>

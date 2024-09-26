@@ -1,65 +1,68 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff; /* White as a background, inspired by the upper stripe of the Polish flag */
     text-align: center;
+    color: #333; /* Neutral text color */
 }
 
-/* Ensure that body height is managed with scrolling in mind */
-html, body {
-    height: 100%;
-}
-
+/* Sticky Menu for Lessons and Test buttons */
 .menu-container {
-    position: sticky; /* Make the button container sticky */
+    position: sticky;
     top: 0;
     width: 100%;
-    background-color: #ffcc00;
+    background-color: #dc143c; /* Red color inspired by the Polish flag */
     z-index: 1000;
     display: flex;
     justify-content: center;
     padding: 10px;
 }
 
+/* Styling for the large buttons */
 .large-button {
     font-size: 24px;
     padding: 20px;
     margin: 10px;
     width: 200px;
     cursor: pointer;
-    border: none;
-    background-color: #ffcc00;
+    border: 2px solid #ffffff; /* White border for contrast */
+    background-color: #dc143c; /* Red background */
     color: white;
     border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 .large-button:hover {
-    background-color: #ff9900;
+    background-color: #ff0000; /* Slightly brighter red on hover */
 }
 
-/* Style for disabled buttons */
+/* Disabled button styling */
 .large-button:disabled {
-    background-color: #ccc;
-    color: #666;
+    background-color: #ff9999; /* Lighter red for disabled state */
+    color: #fff;
     cursor: not-allowed;
 }
 
+/* Content container styling */
 .content-container {
-    margin-top: 20px; /* Adjust the margin so the content isn't too close to the buttons */
+    margin-top: 30px;
     padding: 20px;
+    background-color: #ffffff; /* White background for content */
 }
 
+/* Table Styling for Lessons */
 table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
+    background-color: #fff; /* White background */
 }
 
 th, td {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #dc143c; /* Red borders to reflect the Polish theme */
     text-align: center;
 }
 
@@ -67,8 +70,10 @@ caption h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #dc143c; /* Red caption */
 }
 
+/* Flashcard Container */
 .flashcard-container {
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +83,7 @@ caption h2 {
     overflow: scroll;
 }
 
+/* Flashcard Styling */
 .flashcard {
     width: 250px;
     height: 250px;
@@ -95,18 +101,22 @@ caption h2 {
     justify-content: center;
     font-size: 18px;
     transition: transform 0.6s ease;
-    border: 1px solid #ccc;
+    border: 2px solid #dc143c; /* Red border to reflect the Polish flag */
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
 
+/* Flashcard front (Polish word) */
 .front {
-    background-color: #fff;
+    background-color: #ffffff; /* White front */
+    color: #333; /* Neutral text color */
 }
 
+/* Flashcard back (Pronunciation and English translation) */
 .back {
-    background-color: #ffcc00;
+    background-color: #dc143c; /* Red background for the back */
+    color: #ffffff; /* White text on the back */
     transform: rotateY(180deg);
 }
 
@@ -124,13 +134,44 @@ caption h2 {
 
 .back em {
     font-size: 1em;
-    margin-top: 5px; /* Add some spacing between the meaning and pronunciation */
+    margin-top: 5px; /* Add spacing between the meaning and pronunciation */
 }
 
+/* Flashcard flip animations */
 .flashcard.flipped .front {
     transform: rotateY(180deg);
 }
 
 .flashcard.flipped .back {
     transform: rotateY(360deg);
+}
+
+/* Button Container for Dataset Selection in Test Mode */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.button-container button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #dc143c;
+    background-color: #ffffff;
+    color: #dc143c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #dc143c;
+    color: white;
+}
+
+button.active {
+    background-color: #ff0000;
+    color: white;
+    border: 2px solid white;
 }

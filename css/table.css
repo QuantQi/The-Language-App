@@ -1,0 +1,31 @@
+/* Table Styling for Lessons */
+table {
+    width: 100%;
+    max-width: 600px; /* Set max width of the table */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left; /* Left-align the text inside the table */
+}
+
+caption h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2196F3; /* Material Blue */
+}
+
+/* Alternate row background colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White background for odd rows */
+}

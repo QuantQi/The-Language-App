@@ -37,5 +37,5 @@ function flipCard(card) {
     card.classList.add('flipped');
     setTimeout(() => {
         card.classList.remove('flipped');
-    }, 3000);
+    }, 3000); // Flip back after 3 seconds
 }

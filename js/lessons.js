@@ -13,7 +13,7 @@ function displayLessons() {
 
         const headerRow = document.createElement('tr');
         headerRow.innerHTML = `
-            <th>Polish</th>
+            <th>Phrase</th>
             <th>Pronunciation</th>
             <th>English</th>
         `;
@@ -22,7 +22,7 @@ function displayLessons() {
         dataset.value.forEach((item, index) => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${item.Polish}</td>
+                <td>${item.Phrase}</td>
                 <td>${item.Pronunciation}</td>
                 <td>${item.English}</td>
             `;

@@ -1,5 +1,3 @@
-// app.js
-
 let currentLanguageDataSets = [];
 
 // Function to switch between the loaded datasets

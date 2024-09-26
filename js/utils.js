@@ -1,5 +1,8 @@
 // utils.js
 
+// Global variable to track the active button
+let activeButton = null; 
+
 // Function to highlight the clicked button and remove highlight from the previous one
 function highlightButton(button) {
     if (activeButton) {

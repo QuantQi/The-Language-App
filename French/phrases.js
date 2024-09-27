@@ -1,11 +1,10 @@
 // Initialize the array with the existing constants
 
-function loadFrench(id) {
-    updateButtons(french_dataSets,id);
-}
 
 
 const french_dataSets = [];
+languageList.push({ name: 'French', dataSet: french_dataSets});
+
 
 const french_greetings = [
     {Phrase: "Bonjour", Pronunciation: "bohn-zhoor", English: "Hello"},

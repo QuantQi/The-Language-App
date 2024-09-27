@@ -13,21 +13,11 @@
     <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="css/flashcards.css">
 </head>
-<body>
-    <!-- Language selection buttons -->
+<body onload="loadAllLanguages(languageList)"></body>
+
     <div class="menu-container" id="languageMenuContainer">
-        <button id="polishButton" class="large-button" onclick="loadPolish('polishButton')">
-            <span class="material-icons">flag</span> Polish
-        </button>
-        <button id="bengaliButton"  class="large-button" onclick="loadBengali('bengaliButton')">
-            <span class="material-icons">flag</span> Bengali
-        </button>
-        <button  id="tamilButton" class="large-button" onclick="loadTamil('tamilButton')">
-            <span class="material-icons">flag</span> Tamil
-        </button>
-        <button  id="frenchButton" class="large-button" onclick="loadFrench('frenchButton')">
-            <span class="material-icons">flag</span> French
-        </button>
+      
+    
     </div>
 
     <!-- Lessons and Test Buttons (disabled by default) -->
@@ -48,6 +38,10 @@
     </div>
 
     <!-- Scripts -->
+     <script>
+        const languageList = [];
+     </script> <!-- Load language list -->
+     
     <script src="Polish/phrases.js"></script>  <!-- Load Polish dataset -->
     <script src="Bengali/phrases.js"></script> <!-- Load Bengali dataset -->
     <script src="Tamil/phrases.js"></script> <!-- Load Bengali dataset -->

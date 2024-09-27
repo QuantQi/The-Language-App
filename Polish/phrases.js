@@ -1,11 +1,8 @@
-// Initialize the array with the existing constants
-
-function loadPolish(id) {
-    updateButtons(polish_dataSets,id);
-}
-
 
 const polish_dataSets = [];
+
+languageList.push({ name: 'Polish', dataSet: polish_dataSets});
+
 
 
 const polish_greetings = [

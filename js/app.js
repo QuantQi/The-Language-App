@@ -147,3 +147,23 @@ function createButtons(dataSets) {
         }
     });
 }
+
+function loadAllLanguages(functionsArray) {
+    console.log('Loading all languages...');
+    functionsArray.forEach(language => {
+            console.log('Running function...'+language.name)
+    const languageMenuContainer = document.getElementById('languageMenuContainer');
+    const button = document.createElement('button');
+    button.classList.add('large-button');
+    button.id = language.name+'button';
+    button.textContent = language.name;
+    
+    button.onclick = () => updateButtons(language.dataSet,button.id);
+    const flagIcon = document.createElement('span');
+    flagIcon.classList.add('material-icons');
+    flagIcon.textContent = 'flag';
+    button.prepend(flagIcon);
+
+    languageMenuContainer.appendChild(button);
+    });
+}

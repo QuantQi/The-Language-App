@@ -1,11 +1,9 @@
 
 
-function loadTamil(id) {
-    updateButtons(tamil_dataSets,id);
-}
-
 
 const tamil_dataSets= [];
+languageList.push({ name: 'Tamil', dataSet: tamil_dataSets});
+
 
 
 const tamil_greetings= [

@@ -1,12 +1,9 @@
-// Initialize the array with the existing constants
-
-// Function to load the Bengali data
-function loadBengali(id) {
-    updateButtons(bengali_dataSets,id);
-}
 
 
 const bengali_dataSets = [];
+
+languageList.push({ name: 'Bengali', dataSet: bengali_dataSets});
+
 
 const bengali_greetings = [
     {Phrase: "Nomoshkar", Pronunciation: "no-mosh-kar", English: "Hello"},

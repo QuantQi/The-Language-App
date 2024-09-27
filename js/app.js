@@ -6,15 +6,23 @@ function loadLanguage(language) {
 
     const polishButton = document.querySelector(".large-button[onclick*='Polish']");
     const bengaliButton = document.querySelector(".large-button[onclick*='Bengali']");
+    const tamilButton = document.querySelector(".large-button[onclick*='Tamil']");
 
     if (language === 'Polish') {
         currentLanguageDataSets = polish_dataSets;
         polishButton.disabled = true;
         bengaliButton.disabled = false;
+        tamilButton.disabled = false;
     } else if (language === 'Bengali') {
         currentLanguageDataSets = bengali_dataSets;
-        bengaliButton.disabled = true;
         polishButton.disabled = false;
+        bengaliButton.disabled = true;
+        tamilButton.disabled = false;
+    }else if (language === 'Tamil') {
+        currentLanguageDataSets = tamil_dataSets;
+        polishButton.disabled = false;
+        bengaliButton.disabled = false;
+        tamilButton.disabled = true;
     }
 
     // Automatically load the lessons after a language is selected

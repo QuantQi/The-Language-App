@@ -27,7 +27,7 @@ A dynamic, language-learning web app that helps users learn languages through fl
 
 ## How to Run the Project
 
-1. Visit [The Language app](https://quantqi.github.io/Testing-Polish-with-Flash-cards/)
+1. Visit [The Language app](https://quantqi.github.io/The-Language-App/)
 
 ## Future Enhancements
 

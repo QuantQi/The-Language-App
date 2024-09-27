@@ -1,4 +1,10 @@
-// Initialize the array with the existing constants
+
+
+function loadTamil() {
+    updateButtons(tamil_dataSets,'tamilButton');
+}
+
+
 const tamil_dataSets= [];
 
 

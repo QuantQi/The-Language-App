@@ -1,4 +1,10 @@
 // Initialize the array with the existing constants
+
+function loadPolish() {
+    updateButtons(polish_dataSets,'polishButton');
+}
+
+
 const polish_dataSets = [];
 
 

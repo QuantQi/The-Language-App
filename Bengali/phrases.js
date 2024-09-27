@@ -1,4 +1,11 @@
 // Initialize the array with the existing constants
+
+// Function to load the Bengali data
+function loadBengali() {
+    updateButtons(bengali_dataSets,'bengaliButton');
+}
+
+
 const bengali_dataSets = [];
 
 const bengali_greetings = [

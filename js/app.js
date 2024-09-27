@@ -1,33 +1,19 @@
 let currentLanguageDataSets = [];
 
-// Function to switch between the loaded datasets and reset the app
-function loadLanguage(language) {
+// Function to load data for the selected language
+function updateButtons(languageDataset,id) {
+
     resetApp();
+    currentLanguageDataSets = languageDataset;
+    //disable all buttons with class large-button
+    document.querySelectorAll('.large-button').forEach(button => {
+        button.disabled = false;
+    });
+    document.getElementById(id).disabled = true;
 
-    const polishButton = document.querySelector(".large-button[onclick*='Polish']");
-    const bengaliButton = document.querySelector(".large-button[onclick*='Bengali']");
-    const tamilButton = document.querySelector(".large-button[onclick*='Tamil']");
-
-    if (language === 'Polish') {
-        currentLanguageDataSets = polish_dataSets;
-        polishButton.disabled = true;
-        bengaliButton.disabled = false;
-        tamilButton.disabled = false;
-    } else if (language === 'Bengali') {
-        currentLanguageDataSets = bengali_dataSets;
-        polishButton.disabled = false;
-        bengaliButton.disabled = true;
-        tamilButton.disabled = false;
-    }else if (language === 'Tamil') {
-        currentLanguageDataSets = tamil_dataSets;
-        polishButton.disabled = false;
-        bengaliButton.disabled = false;
-        tamilButton.disabled = true;
-    }
-
-    // Automatically load the lessons after a language is selected
     document.getElementById('lessonButton').disabled = false;
     document.getElementById('testButton').disabled = true;
+
     showLessons();
 }
 

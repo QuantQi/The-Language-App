@@ -1,7 +1,7 @@
 
 
-function loadTamil() {
-    updateButtons(tamil_dataSets,'tamilButton');
+function loadTamil(id) {
+    updateButtons(tamil_dataSets,id);
 }
 
 

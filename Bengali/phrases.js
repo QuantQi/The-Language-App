@@ -1,8 +1,8 @@
 // Initialize the array with the existing constants
 
 // Function to load the Bengali data
-function loadBengali() {
-    updateButtons(bengali_dataSets,'bengaliButton');
+function loadBengali(id) {
+    updateButtons(bengali_dataSets,id);
 }
 
 

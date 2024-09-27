@@ -1,7 +1,7 @@
 // Initialize the array with the existing constants
 
-function loadPolish() {
-    updateButtons(polish_dataSets,'polishButton');
+function loadPolish(id) {
+    updateButtons(polish_dataSets,id);
 }
 
 

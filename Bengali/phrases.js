@@ -9,7 +9,7 @@ const bengali_greetings = [
     {Phrase: "Biday", Pronunciation: "bi-day", English: "Goodbye"},
     {Phrase: "Dhonnobad", Pronunciation: "dhon-no-bad", English: "Thank you"},
     {Phrase: "Doya Kore", Pronunciation: "do-ya ko-re", English: "Please"},
-    {Phrase: "Dukkho Korchi", Pronunciation: "duk-kho kor-chi", English: "Sorry"},
+    {Phrase: "Sorry", Pronunciation: "Sorry", English: "Sorry"},
     {Phrase: "Haan", Pronunciation: "haan", English: "Yes"},
     {Phrase: "Na", Pronunciation: "na", English: "No"}
 ];

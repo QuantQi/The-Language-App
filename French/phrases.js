@@ -1,7 +1,7 @@
 // Initialize the array with the existing constants
 
 function loadFrench(id) {
-    updateButtons(polish_dataSets,id);
+    updateButtons(french_dataSets,id);
 }
 
 

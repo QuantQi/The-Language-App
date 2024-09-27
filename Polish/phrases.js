@@ -1,7 +1,9 @@
 
 const polish_dataSets = [];
 
-languageList.push({ name: 'Polish', dataSet: polish_dataSets});
+languageList.push({ name: 'Polish', dataSet: polish_dataSets, 
+    colours: { primary: 'white', secondary: 'red', tertiary:'lightGray' } });
+
 
 
 

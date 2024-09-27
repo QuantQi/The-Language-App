@@ -1,15 +1,22 @@
 let currentLanguageDataSets = [];
 
 // Function to load data for the selected language
-function updateButtons(languageDataset,id) {
+function updateButtons(languageDataset,id, colours) {
 
     resetApp();
     currentLanguageDataSets = languageDataset;
     //disable all buttons with class large-button
     document.querySelectorAll('.large-button').forEach(button => {
         button.disabled = false;
+        //button.style.backgroundColor = colours.secondary;
+        languageList.forEach(language => {
+            if (language.name === button.id) {
+           // button.style.backgroundColor = language.colours.secondary;
+            }
+        });
     });
     document.getElementById(id).disabled = true;
+   // document.getElementById(id).style.backgroundColor = colours.tertiary;
 
     document.getElementById('lessonButton').disabled = false;
     document.getElementById('testButton').disabled = true;
@@ -149,16 +156,18 @@ function createButtons(dataSets) {
 }
 
 function loadAllLanguages(functionsArray) {
-    console.log('Loading all languages...');
     functionsArray.forEach(language => {
-            console.log('Running function...'+language.name)
+            console.log('Loading...'+language.name)
     const languageMenuContainer = document.getElementById('languageMenuContainer');
     const button = document.createElement('button');
     button.classList.add('large-button');
-    button.id = language.name+'button';
+    button.id = language.name;
     button.textContent = language.name;
-    
-    button.onclick = () => updateButtons(language.dataSet,button.id);
+    if (language.colours) {
+       // button.style.color = language.colours.primary;
+       // button.style.backgroundColor = language.colours.secondary;
+    }
+    button.onclick = () => updateButtons(language.dataSet,button.id,language.colours);
     const flagIcon = document.createElement('span');
     flagIcon.classList.add('material-icons');
     flagIcon.textContent = 'flag';

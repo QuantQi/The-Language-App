@@ -2,7 +2,9 @@
 
 const bengali_dataSets = [];
 
-languageList.push({ name: 'Bengali', dataSet: bengali_dataSets});
+
+languageList.push({ name: 'Bengali', dataSet: bengali_dataSets, 
+    colours: { primary: 'white', secondary: 'orange', tertiary:'lightGray' } });
 
 
 const bengali_greetings = [

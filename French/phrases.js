@@ -3,7 +3,8 @@
 
 
 const french_dataSets = [];
-languageList.push({ name: 'French', dataSet: french_dataSets});
+languageList.push({ name: 'French', dataSet: french_dataSets, 
+    colours: { primary: 'white', secondary: 'navyBlue', tertiary:'lightGray' } });
 
 
 const french_greetings = [

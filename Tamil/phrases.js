@@ -2,7 +2,8 @@
 
 
 const tamil_dataSets= [];
-languageList.push({ name: 'Tamil', dataSet: tamil_dataSets});
+languageList.push({ name: 'Tamil', dataSet: tamil_dataSets, 
+    colours: { primary: 'white', secondary: 'darkGreen', tertiary:'lightGray' } });
 
 
 

@@ -1,12 +1,15 @@
 /* Table Styling for Lessons */
-table {
+table,.mnemonic_story {
     width: 100%;
     max-width: 600px; /* Set max width of the table */
     margin: 20px auto;
     border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Left-align text in the table */
+    padding: auto;
 }
+
 
 th, td {
     padding: 10px;

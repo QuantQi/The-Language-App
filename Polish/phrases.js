@@ -79,7 +79,7 @@ const polish_colors = [
 polish_dataSets.push({ 
     name: 'Colors', 
     value: polish_colors,
-    Mnemonic: `The charming (char-nih) black cat with by-all-means (byah-wih) white whiskers chased a cheery pony (chehr-voh-nih) that's red. A jelly pony (zhyeh-loh-nih) that's green joined the chase under newbie ski (nyeh-byeh-skee) blue skies. The jewel tea (zhool-tih) yellow sun over pomegranate showy (poh-mah-rahn-choh-vih) orange clouds turned violin toffee (fyoh-leh-toh-vih) purple and rouge over (roo-zhoh-vih) pink hues as the brown dove (brow-zoh-vih) soared.`
+    Mnemonic: `The charming (char-nih) black cat with by-all-means (byah-wih) white whiskers chased a red cheery pony (chehr-voh-nih). A green jelly pony (zhyeh-loh-nih) joined the chase under blue newbie ski (nyeh-byeh-skee). The yellow jewel tea (zhool-tih) sun over orange pomegranate showy (poh-mah-rahn-choh-vih) clouds turned purple violin toffee (fyoh-leh-toh-vih) and rouge over (roo-zhoh-vih) pink hues as the brown dove (brow-zoh-vih) soared.`
 });
 
 const polish_family = [

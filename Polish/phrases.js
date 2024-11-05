@@ -632,3 +632,33 @@ In the **zen** (*dzyen*, day) garden, we relax and sway,
 
 That's how we measure the **time** today.`
 });
+
+const polish_phrases = [
+    {Phrase: "Chciałbym zamówić jedzenie", Pronunciation: "h-chyah-wim (I would like) zah-moo-veech (to order) yeh-dzen-yeh (food)", English: "I would like to order food"},
+    {Phrase: "Chciałbym wypożyczyć film", Pronunciation: "h-chyah-wim (I would like) vih-poh-zhi-chyhts (to rent) film (a movie)", English: "I would like to rent a movie"},
+    {Phrase: "Chciałbym kupić bilet", Pronunciation: "h-chyah-wim (I would like) koo-peech (to buy) bee-let (a ticket)", English: "I would like to buy a ticket"},
+    {Phrase: "Chciałbym odwiedzić Polskę", Pronunciation: "h-chyah-wim (I would like) ohd-vyeh-dzich (to visit) Pol-skeh (Poland)", English: "I would like to visit Poland"},
+    {Phrase: "Chciałbym nauczyć się polskiego", Pronunciation: "h-chyah-wim (I would like) nah-oo-chih-ts (to learn) shyeh (to) pol-skeh-go (Polish)", English: "I would like to learn Polish"},
+    {Phrase: "Chciałbym pojechać na wakacje", Pronunciation: "h-chyah-wim (I would like) poh-yeh-hach (to go) nah (on) vah-kah-tsyeh (vacation)", English: "I would like to go on vacation"},
+    {Phrase: "Chciałbym spotkać się z przyjaciółmi", Pronunciation: "h-chyah-wim (I would like) spot-kach (to meet) shyeh (with) z (with) pzhih-yah-choo-mee (friends)", English: "I would like to meet with friends"},
+    {Phrase: "Chciałbym przeczytać tę książkę", Pronunciation: "h-chyah-wim (I would like) psheh-chy-tach (to read) ten (this) kshyawn-skeh (book)", English: "I would like to read this book"},
+    {Phrase: "Chciałbym zjeść coś pysznego", Pronunciation: "h-chyah-wim (I would like) zhyest (to eat) chosh (something) pihsh-neh-go (delicious)", English: "I would like to eat something delicious"},
+    {Phrase: "Chciałbym kupić nowy telefon", Pronunciation: "h-chyah-wim (I would like) koo-peech (to buy) noh-vih (new) teh-leh-fon (phone)", English: "I would like to buy a new phone"},
+    {Phrase: "Chciałbym zobaczyć ten film", Pronunciation: "h-chyah-wim (I would like) zo-bah-chyhts (to see) ten (this) film (movie)", English: "I would like to see this movie"},
+    {Phrase: "Chciałbym usłyszeć tę piosenkę", Pronunciation: "h-chyah-wim (I would like) oo-swi-shehch (to hear) ten (this) pyo-sen-keh (song)", English: "I would like to hear this song"},
+    {Phrase: "Chciałbym mieć więcej czasu", Pronunciation: "h-chyah-wim (I would like) myetch (to have) vyen-tseh-choo (more) czas-u (time)", English: "I would like to have more time"},
+    {Phrase: "Chciałbym dowiedzieć się więcej", Pronunciation: "h-chyah-wim (I would like) doh-vyeh-dzyeh (to learn) shyeh (to) vyen-tseh (more)", English: "I would like to learn more"},
+    {Phrase: "Chciałbym wybrać się na spacer", Pronunciation: "h-chyah-wim (I would like) vih-brahts (to go) shyeh (for) nah (a) spah-tser (walk)", English: "I would like to go for a walk"},
+    {Phrase: "Chciałbym dostać prezent", Pronunciation: "h-chyah-wim (I would like) doh-stahch (to receive) preh-zent (a gift)", English: "I would like to receive a gift"},
+    {Phrase: "Chciałbym napić się kawy", Pronunciation: "h-chyah-wim (I would like) nah-peech (to have) shyeh (a) kah-vih (coffee)", English: "I would like to have a coffee"},
+    {Phrase: "Chciałbym zagrać w grę", Pronunciation: "h-chyah-wim (I would like) zah-grahts (to play) v (a) greh (game)", English: "I would like to play a game"},
+    {Phrase: "Chciałbym odwiedzić muzeum", Pronunciation: "h-chyah-wim (I would like) ohd-vyeh-dzich (to visit) moo-zeh-oom (a museum)", English: "I would like to visit a museum"},
+    {Phrase: "Chciałbym kupić kwiaty", Pronunciation: "h-chyah-wim (I would like) koo-peech (to buy) kvya-ty (flowers)", English: "I would like to buy flowers"}
+];
+
+polish_dataSets.push({ 
+    name: 'Phrases', 
+    value: polish_phrases, 
+    Mnemonic: `At a restaurant, I (h-chyah-wim) would like to order food (zah-moo-veech yeh-dzen-yeh) while watching a movie (vih-poh-zhi-chyhts film) and buying a ticket (koo-peech bee-let). I dream of visiting Poland (ohd-vyeh-dzich Pol-skeh) and learning Polish (nah-oo-chih-ts shyeh pol-skeh-go) for my vacation (poh-yeh-hach nah vah-kah-tsyeh). On a walk (vih-brahts shyeh nah spah-tser) with friends (shyeh z pzhih-yah-choo-mee), I want to read a book (psheh-chy-tach ten kshyawn-skeh) and enjoy something delicious (zhyest chosh pihsh-neh-go). Let's grab a coffee (nah-peech shyeh kah-vih) and play a game (zah-grahts v greh) before visiting a museum (ohd-vyeh-dzich moo-zeh-oom).`
+});
+

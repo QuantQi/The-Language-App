@@ -633,7 +633,7 @@ In the **zen** (*dzyen*, day) garden, we relax and sway,
 That's how we measure the **time** today.`
 });
 
-const polish_phrases = [
+const polish_phrase_Chcialbym = [
     {Phrase: "Chciałbym zamówić jedzenie", Pronunciation: "h-chyah-wim (I would like) zah-moo-veech (to order) yeh-dzen-yeh (food)", English: "I would like to order food"},
     {Phrase: "Chciałbym wypożyczyć film", Pronunciation: "h-chyah-wim (I would like) vih-poh-zhi-chyhts (to rent) film (a movie)", English: "I would like to rent a movie"},
     {Phrase: "Chciałbym kupić bilet", Pronunciation: "h-chyah-wim (I would like) koo-peech (to buy) bee-let (a ticket)", English: "I would like to buy a ticket"},
@@ -657,8 +657,8 @@ const polish_phrases = [
 ];
 
 polish_dataSets.push({ 
-    name: 'Phrases', 
-    value: polish_phrases, 
+    name: 'Chcialbym', 
+    value: polish_phrase_Chcialbym, 
     Mnemonic: `At a restaurant, I (h-chyah-wim) would like to order food (zah-moo-veech yeh-dzen-yeh) while watching a movie (vih-poh-zhi-chyhts film) and buying a ticket (koo-peech bee-let). I dream of visiting Poland (ohd-vyeh-dzich Pol-skeh) and learning Polish (nah-oo-chih-ts shyeh pol-skeh-go) for my vacation (poh-yeh-hach nah vah-kah-tsyeh). On a walk (vih-brahts shyeh nah spah-tser) with friends (shyeh z pzhih-yah-choo-mee), I want to read a book (psheh-chy-tach ten kshyawn-skeh) and enjoy something delicious (zhyest chosh pihsh-neh-go). Let's grab a coffee (nah-peech shyeh kah-vih) and play a game (zah-grahts v greh) before visiting a museum (ohd-vyeh-dzich moo-zeh-oom).`
 });
 

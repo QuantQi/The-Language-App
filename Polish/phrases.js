@@ -641,18 +641,6 @@ const polish_phrase_Chcialbym = [
     {Phrase: "Chciałbym nauczyć się polskiego", Pronunciation: "h-chyah-wim (I would like) nah-oo-chih-ts (to learn) shyeh (to) pol-skeh-go (Polish)", English: "I would like to learn Polish"},
     {Phrase: "Chciałbym pojechać na wakacje", Pronunciation: "h-chyah-wim (I would like) poh-yeh-hach (to go) nah (on) vah-kah-tsyeh (vacation)", English: "I would like to go on vacation"},
     {Phrase: "Chciałbym spotkać się z przyjaciółmi", Pronunciation: "h-chyah-wim (I would like) spot-kach (to meet) shyeh (with) z (with) pzhih-yah-choo-mee (friends)", English: "I would like to meet with friends"},
-    {Phrase: "Chciałbym przeczytać tę książkę", Pronunciation: "h-chyah-wim (I would like) psheh-chy-tach (to read) ten (this) kshyawn-skeh (book)", English: "I would like to read this book"},
-    {Phrase: "Chciałbym zjeść coś pysznego", Pronunciation: "h-chyah-wim (I would like) zhyest (to eat) chosh (something) pihsh-neh-go (delicious)", English: "I would like to eat something delicious"},
-    {Phrase: "Chciałbym kupić nowy telefon", Pronunciation: "h-chyah-wim (I would like) koo-peech (to buy) noh-vih (new) teh-leh-fon (phone)", English: "I would like to buy a new phone"},
-    {Phrase: "Chciałbym zobaczyć ten film", Pronunciation: "h-chyah-wim (I would like) zo-bah-chyhts (to see) ten (this) film (movie)", English: "I would like to see this movie"},
-    {Phrase: "Chciałbym usłyszeć tę piosenkę", Pronunciation: "h-chyah-wim (I would like) oo-swi-shehch (to hear) ten (this) pyo-sen-keh (song)", English: "I would like to hear this song"},
-    {Phrase: "Chciałbym mieć więcej czasu", Pronunciation: "h-chyah-wim (I would like) myetch (to have) vyen-tseh-choo (more) czas-u (time)", English: "I would like to have more time"},
-    {Phrase: "Chciałbym dowiedzieć się więcej", Pronunciation: "h-chyah-wim (I would like) doh-vyeh-dzyeh (to learn) shyeh (to) vyen-tseh (more)", English: "I would like to learn more"},
-    {Phrase: "Chciałbym wybrać się na spacer", Pronunciation: "h-chyah-wim (I would like) vih-brahts (to go) shyeh (for) nah (a) spah-tser (walk)", English: "I would like to go for a walk"},
-    {Phrase: "Chciałbym dostać prezent", Pronunciation: "h-chyah-wim (I would like) doh-stahch (to receive) preh-zent (a gift)", English: "I would like to receive a gift"},
-    {Phrase: "Chciałbym napić się kawy", Pronunciation: "h-chyah-wim (I would like) nah-peech (to have) shyeh (a) kah-vih (coffee)", English: "I would like to have a coffee"},
-    {Phrase: "Chciałbym zagrać w grę", Pronunciation: "h-chyah-wim (I would like) zah-grahts (to play) v (a) greh (game)", English: "I would like to play a game"},
-    {Phrase: "Chciałbym odwiedzić muzeum", Pronunciation: "h-chyah-wim (I would like) ohd-vyeh-dzich (to visit) moo-zeh-oom (a museum)", English: "I would like to visit a museum"},
     {Phrase: "Chciałbym kupić kwiaty", Pronunciation: "h-chyah-wim (I would like) koo-peech (to buy) kvya-ty (flowers)", English: "I would like to buy flowers"}
 ];
 

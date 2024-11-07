@@ -647,6 +647,10 @@ const polish_phrase_Chcialbym = [
 polish_dataSets.push({ 
     name: 'Chcialbym', 
     value: polish_phrase_Chcialbym, 
-    Mnemonic: `At a restaurant, I (h-chyah-wim) would like to order food (zah-moo-veech yeh-dzen-yeh) while watching a movie (vih-poh-zhi-chyhts film) and buying a ticket (koo-peech bee-let). I dream of visiting Poland (ohd-vyeh-dzich Pol-skeh) and learning Polish (nah-oo-chih-ts shyeh pol-skeh-go) for my vacation (poh-yeh-hach nah vah-kah-tsyeh). On a walk (vih-brahts shyeh nah spah-tser) with friends (shyeh z pzhih-yah-choo-mee), I want to read a book (psheh-chy-tach ten kshyawn-skeh) and enjoy something delicious (zhyest chosh pihsh-neh-go). Let's grab a coffee (nah-peech shyeh kah-vih) and play a game (zah-grahts v greh) before visiting a museum (ohd-vyeh-dzich moo-zeh-oom).`
+    Mnemonic: `I went to order peach (zah-moo-veech) pie and said, “Yeah, then yeah” (yeh-dzen-yeh), looking forward to my food. Later, I made a tiptoe switch (vih-poh-zhi-chyhts) to watch a film. I scooped each bee-lit (koo-peech bee-let) ticket and planned an odd voyage (ohd-vyeh-dzich) to see the Pole’s sky (Pol-skeh).
+
+On the way, I met a friend who said, “Who cheats (nah-oo-chih-ts) to share (shyeh) Pole’s Lego (pol-skeh-go)?” We laughed and decided to poet hatch (poh-yeh-hach) a plan to now vacate, yeah (nah vah-kah-tsyeh)!
+
+We then spot caught (spot-kach) a perfect picnic share z (shyeh z) pretty yachting me (pzhih-yah-choo-mee) and enjoyed some quiet tea (kvya-ty) with flowers around.`
 });
 
